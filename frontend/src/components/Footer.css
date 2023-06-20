@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+  }
+
+  .container {
+    margin: 1rem;
+    text-align: center;
+  }
+
+  .footer {
+    margin-top: auto;
+    background-color: #55c360;
+    color:white;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 0 1rem;
+    
+}
+.footer ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+
+.footer a {
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: .25rem;
+  }
+
+
+
+
+
+
