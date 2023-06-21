@@ -1,7 +1,6 @@
 import { BottomNavigation } from '@mui/material';
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
 import "./Footer.css"
-import webscope from "../assets/webscope.png"
 
 const Footer=()=>{
     return (

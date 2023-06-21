@@ -13,9 +13,13 @@ body {
     
 
 .footer {
-    margin-top: auto;
-    background-color: #55c360;
+  width: 100%;
+  background-color: #55c360;
+  margin-top: auto;
+
 }
+.fixed-bottom {position: fixed;bottom: 0;width:100%;}
+
 
 .sb_footer{
   display: flex;
