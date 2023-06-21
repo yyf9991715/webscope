@@ -8,7 +8,6 @@ body {
 .container {
     margin: 1rem;
     text-align: center;
-<<<<<<< Updated upstream
 }
     
     
@@ -21,16 +20,6 @@ body {
 }
 .fixed-bottom {position: fixed;bottom: 0;width:100%;}
 
-=======
-}
-    
-    
-
-.footer {
-    margin-top: auto;
-    background-color: #55c360;
-}
->>>>>>> Stashed changes
 
 .sb_footer{
   display: flex;
