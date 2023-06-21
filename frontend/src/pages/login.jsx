@@ -22,13 +22,10 @@ export default function Login (){
             <br />
             <br />
             <div className="login-buttons">
-                <Button variant="contained" color="success">Login in</Button>
+                <Button variant="contained" color="success">Login</Button>
             </div>
-            <br />
-            <br />
             <div class="signup-link">
                 <p> Don't have an account? </p>
-               
                 <a href="/signup" >Sign up</a> 
             </div>
             

@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     position: relative;
     margin: 0;
+    
   }
 
   .background-image {
@@ -12,6 +13,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
+    
   }
   .text h1{
     color:#55c360;
@@ -33,7 +35,11 @@ body {
   .signup-link {
     margin-top: 20px;
   }
+  .signup-link p{
+    font-size: 12px ;
+  }
   .signup-link a{
-    color:black;
+    font-size: 14px;
+    color:green;
   }
 

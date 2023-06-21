@@ -2,7 +2,9 @@ const person = {
     name: 'User',
     theme: {
       backgroundColor: 'white',
-      color: 'black'
+      color: 'black',
+      height:"65vh"
+
     }
   };
 
@@ -18,7 +20,7 @@ function Profileimg() {
   export default function Userprofilsetting() {
     return (
       <>
-        <div style={person.style}>
+        <div style={person.theme}>
         <h1>{person.name}'s Profil</h1>
         <Profileimg/>
         
