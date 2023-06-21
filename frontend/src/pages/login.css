@@ -4,6 +4,12 @@ body {
     position: relative;
     margin: 0;
   }
+<<<<<<< Updated upstream
+=======
+  .Card{
+    background-color: green;
+  }
+>>>>>>> Stashed changes
 
   .background-image {
     position: fixed;

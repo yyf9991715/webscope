@@ -1,6 +1,10 @@
 import { BottomNavigation } from '@mui/material';
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
 import "./Footer.css"
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 
 const Footer=()=>{
     return (
