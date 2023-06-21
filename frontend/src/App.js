@@ -7,7 +7,9 @@ import Home from "./pages/Home"
 import Userprofilsetting from './pages/Userprofilsetting';
 import { Route, Routes } from "react-router-dom"
 import Login from './pages/login';
-import Signin from './pages/signin';
+import Signup from './pages/signup';
+import Contactus from "./pages/Contactus"
+import Privacy from './pages/Privacy';
 
 
 function App() {
@@ -19,9 +21,11 @@ function App() {
       <Routes>
         <Route path="/" exact Component={Home} />
         <Route path="/login" Component={Login} />
-        <Route path="/signin" Component={Signin} />
+        <Route path="/signup" Component={Signup} />
         <Route path="/userprofilsetting" Component={Userprofilsetting} />
         <Route path="/aboutus" Component={Aboutus} />
+        <Route path="/contactus" Component={Contactus} />
+        <Route path="/privacy" Component={Privacy} />
       </Routes>
     </div>
     <Footer/>
