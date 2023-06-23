@@ -1,6 +1,6 @@
 import React from 'react'
 
-function chatgpt() {
+function Search() {
   return (
     <div>
       
@@ -8,4 +8,4 @@ function chatgpt() {
   )
 }
 
-export default chatgpt
+export default Search

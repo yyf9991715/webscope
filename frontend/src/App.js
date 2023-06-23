@@ -11,6 +11,10 @@ import Signup from './pages/Signup';
 import Contactus from "./pages/Contactus"
 import Privacy from './pages/Privacy';
 import {Grid } from '@mui/material';
+import Search from "./pages/Search";
+import Resource from "./pages/Resource"
+import Reviewandrating from "./pages/Reviewandrating"
+import Chatgpt from "./pages/Chatgpt"
 
 function App() {
   return (
@@ -27,7 +31,11 @@ function App() {
         <Route path="/aboutus" Component={Aboutus} />
         <Route path="/contactus" Component={Contactus} />
         <Route path="/privacy" Component={Privacy} />
+        <Route path="/search" Component={Search} />
+        <Route path="/resource" Component={Resource} />
+        <Route path="/reviewandrating" Component={Reviewandrating} />
         <Route path="/user/:activepage" element={<Userprofilsetting/>} />
+        <Route path="/chatgpt" Component={Chatgpt} />
         <Route path="*" Component={
           <div>
             <h1>404 NOT FOUND</h1>
