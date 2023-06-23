@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
 import "./Navigationbar.css"
+import Searchbar from './Searchbar';
 
 const  Navbar=()=>{
     return (
@@ -8,6 +9,10 @@ const  Navbar=()=>{
         <Link to="/" className='site-title'>
             eLearningHelper
         </Link>
+        <div className="searchbar-container">
+                <Searchbar/>
+        </div>
+        
         <ul>
             <li>
                 <Link to="/user/accountsetting">User Profil </Link>
@@ -18,9 +23,7 @@ const  Navbar=()=>{
             </li>
             <li>
                 <Link to="/signup">Sign up </Link>
-            </li>
-        
-            
+            </li>    
         </ul>
 
         </nav>
