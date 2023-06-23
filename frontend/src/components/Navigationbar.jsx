@@ -10,7 +10,7 @@ const  Navbar=()=>{
         </Link>
         <ul>
             <li>
-                <Link to="/userprofilsetting">User Profil </Link>
+                <Link to="/user/accountsetting">User Profil </Link>
             </li>
             
             <li>

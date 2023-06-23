@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     position: relative;
     margin: 0;
+    height: 75vh;
     
   }
 
@@ -17,6 +18,7 @@ body {
   }
   .text h1{
     color:#55c360;
+    font-family: cursive;
   }
 
   .overlay {

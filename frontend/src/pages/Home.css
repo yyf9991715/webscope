@@ -1,7 +1,100 @@
-.main  {
-    min-height: 100%;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    margin-top: -100px;
-    margin-bottom: -100px;
+.sub-home1  {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.home-bac img{
+    width: 100%;
+    height:120%;
+    display:flex;
+    z-index: -1;
+    object-fit: cover;
+}
+.sub-home1 .home-intro{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sub-home1 .home-intro h1{
+    margin-top: 20px;
+    color: white;
+    font-size: 60px;
+    font-weight: 100;
+    font-family:'Times New Roman', Times, serif;
+}
+.sub-home1 .home-intro .title{
+    margin-top: 20px;
+    color: white;
+    font-size: 60px;
+    font-weight: 100;
+    font-family:fantasy;
+    font-style: italic;
+}
+.sub-home2{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 5vh;
+    gap: 20px;
+}
+.sub-home2 .left{
+    width:30%;
+    border:1px solid rgb(207, 207, 207);
+    border-radius: 5px;
+    min-height: 50vh;
+}
+.sub-home2 .middle{
+    width:30%;
+    border:1px solid rgb(207, 207, 207);
+    border-radius: 5px;
+    min-height: 50vh;
+}
+.sub-home2 .right{
+    width:30%;
+    border:1px solid rgb(207, 207, 207);
+    border-radius: 5px;
+    min-height: 50vh;
+}
+
+.sub-home3  h1{
+    color: MidnightBlue;
+    font-size: 60px;
+    font-weight: 100;
+    font-style: italic;
+    font-family:'Times New Roman', Times, serif;
+}
+.sub-home3 .home-button{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+}
+.sub-home3 .home-button button{    
+        padding: 15px 40px;
+        border-radius: 2px;
+        outline:none;
+        cursor:pointer; 
+        background-color: MidnightBlue;
+        color: white;
+        font-size: large;
+        border: 1px solid white ;     
+}
+.sub-home3{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 5vh;
+}
+.sub-home3 .left{
+    width:30%;
+    border:1px solid rgb(207, 207, 207);
+   
+}
+.sub-home3 .right{
+    width:60%;
+    border:1px solid rgb(207, 207, 207);
+   
 }

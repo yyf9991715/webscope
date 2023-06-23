@@ -47,7 +47,7 @@ body {
 
 }
 
-a{
+.footer a{
   color:green;
   text-decoration: none;
 }
@@ -64,6 +64,7 @@ a{
   font-size: 14px;
   line-height: 17px;
   margin-bottom: 0.9rem;
+  
 
 }
 
@@ -83,7 +84,7 @@ a{
   font-weight: 300;
 }
 
-hr{
+.footer hr{
   color:#55c360;
   width:100%;
 }
