@@ -1,0 +1,295 @@
+connected to DB
+{
+  _id: '64907428760997866ad69f48',
+  title: 'Python in easy steps',
+  price: new Decimal128("10.69"),
+  'price (including used books)': 10.69,
+  pages: 192,
+  avg_reviews: 4.6,
+  n_reviews: 386,
+  dimensions: '7.25 x 0.5 x 9 inches',
+  weight: '15.2 ounces',
+  language: 'English',
+  publisher: 'In Easy Steps Limited; 2nd edition (August 28, 2018)',
+  ISBN_13: '978-1840788129',
+  link: '/Python-easy-steps-Covers-3-7/dp/1840788127/ref=sr_1_58?keywords=python&qid=1671164641&sr=8-58',
+  complete_link: 'https://www.amazon.com/Python-easy-steps-Covers-3-7/dp/1840788127/ref=sr_1_58?keywords=python&qid=1671164641&sr=8-58'
+}
+{
+  _id: '64907428760997866ad69f39',
+  title: 'Guerrilla Data Analysis Using Microsoft Excel: Overcoming Crap Data and Excel Skirmishes',
+  author: '[ Oz du Soleil,  and , Bill Jelen]',
+  price: new Decimal128("32.07"),
+  'price (including used books)': 32.07,
+  pages: 274,
+  avg_reviews: 4.7,
+  n_reviews: 10,
+  dimensions: '8.25 x 0.6 x 10.75 inches',
+  weight: '1.4 pounds',
+  language: 'English',
+  publisher: 'Holy Macro! Books; Third edition (August 1, 2022)',
+  ISBN_13: '978-1615470747',
+  link: '/Guerrilla-Analysis-Using-Microsoft-Excel/dp/1615470743/ref=sr_1_14?keywords=data+analysis&qid=1671164640&sr=8-14',
+  complete_link: 'https://www.amazon.com/Guerrilla-Analysis-Using-Microsoft-Excel/dp/1615470743/ref=sr_1_14?keywords=data+analysis&qid=1671164640&sr=8-14'
+}
+{
+  _id: '64907428760997866ad69f38',
+  title: "Head First Data Analysis: A learner's guide to big numbers, statistics, and good decisions",
+  price: new Decimal128("33.72"),
+  'price (including used books)': ' 21.49 - 33.72 ',
+  pages: 484,
+  avg_reviews: 4.3,
+  n_reviews: 124,
+  dimensions: '8 x 0.98 x 9.25 inches',
+  weight: '1.96 pounds',
+  language: 'English',
+  publisher: "O'Reilly Media; 1st edition (August 18, 2009)",
+  ISBN_13: '978-0596153939',
+  link: '/Head-First-Data-Analysis-statistics/dp/0596153937/ref=sr_1_15?keywords=data+analysis&qid=1671164640&sr=8-15',
+  complete_link: 'https://www.amazon.com/Head-First-Data-Analysis-statistics/dp/0596153937/ref=sr_1_15?keywords=data+analysis&qid=1671164640&sr=8-15'
+}
+{
+  _id: '64907428760997866ad69f47',
+  title: 'Monty Python And The Holy Grail',
+  link: '/Monty-Python-Grail-Graham-Chapman/dp/B07PGCJM9V/ref=sr_1_54?keywords=python&qid=1671164641&sr=8-54',
+  complete_link: 'https://www.amazon.com/Monty-Python-Grail-Graham-Chapman/dp/B07PGCJM9V/ref=sr_1_54?keywords=python&qid=1671164641&sr=8-54'
+}
+{
+  _id: '64907428760997866ad69f4a',
+  title: 'Quantum Machine Learning and Optimisation in Finance: On the Road to Quantum Advantage',
+  author: '[ Antoine Jacquier, Oleksiy Kondratyev, et al.]',
+  price: new Decimal128("49.99"),
+  'price (including used books)': ' 36.00 - 49.99 ',
+  pages: 442,
+  avg_reviews: 4.9,
+  n_reviews: 14,
+  dimensions: '7.5 x 1 x 9.25 inches',
+  weight: '1.67 pounds',
+  language: 'English',
+  publisher: 'Packt Publishing (October 31, 2022)',
+  ISBN_13: ' ',
+  link: '/gp/slredirect/picassoRedirect.html/ref=pa_sp_mtf_aps_sr_pg1_1?ie=UTF8&adId=A0112114AAL7F70PN39A&qualifier=1671164641&id=635941087458057&widgetName=sp_mtf&url=%2FQuantum-Machine-Learning-Optimisation-Finance%2Fdp%2F1801813574%2Fref%3Dsr_1_30_sspa%3Fcrid%3D27NSKOKLZAT5L%26keywords%3Dmachine%2Blearning%26qid%3D1671164641%26sprefix%3Ddeep%2Blearning%252Caps%252C627%26sr%3D8-30-spons%26psc%3D1',
+  complete_link: 'https://www.amazon.com/gp/slredirect/picassoRedirect.html/ref=pa_sp_mtf_aps_sr_pg1_1?ie=UTF8&adId=A0112114AAL7F70PN39A&qualifier=1671164641&id=635941087458057&widgetName=sp_mtf&url=%2FQuantum-Machine-Learning-Optimisation-Finance%2Fdp%2F1801813574%2Fref%3Dsr_1_30_sspa%3Fcrid%3D27NSKOKLZAT5L%26keywords%3Dmachine%2Blearning%26qid%3D1671164641%26sprefix%3Ddeep%2Blearning%252Caps%252C627%26sr%3D8-30-spons%26psc%3D1'
+}
+{
+  _id: '64907428760997866ad69f37',
+  title: 'Data Analysis Using R (Low Priced Edition): A Primer for Data Scientist',
+  author: '[ Dr Dhaval Maheta]',
+  price: new Decimal128("6.75"),
+  'price (including used books)': 6.75,
+  pages: 500,
+  avg_reviews: 4.4,
+  n_reviews: 23,
+  dimensions: '8.5 x 1.01 x 11 inches',
+  weight: '2.53 pounds',
+  language: 'English',
+  publisher: 'Notion Press Media Pvt Ltd (November 22, 2021)',
+  ISBN_13: '978-1685549596',
+  link: '/Data-Analysis-Using-Low-Priced/dp/1685549594/ref=sr_1_16?keywords=data+analysis&qid=1671164640&sr=8-16',
+  complete_link: 'https://www.amazon.com/Data-Analysis-Using-Low-Priced/dp/1685549594/ref=sr_1_16?keywords=data+analysis&qid=1671164640&sr=8-16'
+}
+{
+  _id: '64907428760997866ad69f53',
+  title: 'Boa Vs. Python',
+  link: '/Boa-Vs-Python-David-Hewlett/dp/B076JK1T3J/ref=sr_1_42?keywords=python&qid=1671164641&sr=8-42',
+  complete_link: 'https://www.amazon.com/Boa-Vs-Python-David-Hewlett/dp/B076JK1T3J/ref=sr_1_42?keywords=python&qid=1671164641&sr=8-42'
+}
+{
+  _id: '64907428760997866ad69f52',
+  title: 'Python Programming For Beginners: The Ultimate Crash Course to Learn Python Coding Quickly and Easily | Step-by-Step Guide With Hands-on Exercises & Beginners Projects',
+  author: '[ Leonard J. Ledger]',
+  price: new Decimal128("15.97"),
+  'price (including used books)': 15.97,
+  pages: 88,
+  avg_reviews: 4.9,
+  n_reviews: 264,
+  dimensions: '8.5 x 0.2 x 11 inches',
+  weight: '9.9 ounces',
+  language: 'English',
+  publisher: 'Independently published (September 24, 2022)',
+  ISBN_13: '979-8354411122',
+  link: '/Python-Programming-Beginners-Step-Hands/dp/B0BFTYFPBY/ref=sr_1_46?keywords=python&qid=1671164641&sr=8-46',
+  complete_link: 'https://www.amazon.com/Python-Programming-Beginners-Step-Hands/dp/B0BFTYFPBY/ref=sr_1_46?keywords=python&qid=1671164641&sr=8-46'
+}
+{
+  _id: '64907428760997866ad69f74',
+  title: 'Automate the Boring Stuff with Python, 2nd Edition: Practical Programming for Total Beginners',
+  author: '[ Al Sweigart]',
+  price: new Decimal128("26.49"),
+  'price (including used books)': 26.49,
+  pages: 592,
+  avg_reviews: 4.7,
+  dimensions: '7 x 1.31 x 9.31 inches',
+  weight: '3.53 ounces',
+  language: 'English',
+  publisher: 'No Starch Press; 2nd edition (November 12, 2019)',
+  ISBN_13: '-34%',
+  link: '/Automate-Boring-Stuff-Python-2nd/dp/1593279922/ref=sr_1_86?keywords=data+analysis&qid=1671164651&sr=8-86',
+  complete_link: 'https://www.amazon.com/Automate-Boring-Stuff-Python-2nd/dp/1593279922/ref=sr_1_86?keywords=data+analysis&qid=1671164651&sr=8-86'
+}
+{
+  _id: '64907428760997866ad69f8e',
+  title: 'An Introduction to R: Data Analysis and Visualization (Research Skills)',
+  author: '[ Mark Gardener]',
+  price: new Decimal128("37.99"),
+  'price (including used books)': 37.99,
+  pages: 384,
+  language: 'English',
+  publisher: 'Pelagic Publishing (May 5, 2023)',
+  link: '/Introduction-Analysis-Visualization-Research-Skills-ebook/dp/B0BMQWGVY1/ref=sr_1_201?keywords=data+analysis&qid=1671164670&sr=8-201',
+  complete_link: 'https://www.amazon.com/Introduction-Analysis-Visualization-Research-Skills-ebook/dp/B0BMQWGVY1/ref=sr_1_201?keywords=data+analysis&qid=1671164670&sr=8-201'
+}
+{
+  _id: '64907428760997866ad69f93',
+  title: 'Microsoft Office 365 For Beginners: The 1# Crash Course From Beginners To Advanced. Easy Way to Master The Whole Suite in no Time | Excel, Word, PowerPoint, OneNote, OneDrive, Outlook, Teams & Access',
+  author: '[ Leonard J. Ledger]',
+  price: new Decimal128("18.97"),
+  'price (including used books)': 18.97,
+  pages: 131,
+  avg_reviews: 5,
+  n_reviews: 442,
+  dimensions: '8.5 x 0.3 x 11 inches',
+  weight: '14.4 ounces',
+  language: 'English',
+  publisher: 'Independently published (September 26, 2022)',
+  ISBN_13: '979-8354840113',
+  link: '/gp/slredirect/picassoRedirect.html/ref=pa_sp_mtf_aps_sr_pg3_1?ie=UTF8&adId=A095594414G465SGQ2KVK&qualifier=1671164661&id=8763482864697680&widgetName=sp_mtf&url=%2FMicrosoft-Office-365-Beginners-PowerPoint%2Fdp%2FB0BGSNXP88%2Fref%3Dsr_1_131_sspa%3Fkeywords%3Ddata%2Banalysis%26qid%3D1671164661%26sr%3D8-131-spons%26psc%3D1',
+  complete_link: 'https://www.amazon.com/gp/slredirect/picassoRedirect.html/ref=pa_sp_mtf_aps_sr_pg3_1?ie=UTF8&adId=A095594414G465SGQ2KVK&qualifier=1671164661&id=8763482864697680&widgetName=sp_mtf&url=%2FMicrosoft-Office-365-Beginners-PowerPoint%2Fdp%2FB0BGSNXP88%2Fref%3Dsr_1_131_sspa%3Fkeywords%3Ddata%2Banalysis%26qid%3D1671164661%26sr%3D8-131-spons%26psc%3D1'
+}
+{
+  _id: '64907428760997866ad69f9a',
+  title: 'Qualitative Data Analysis with NVivo',
+  author: '[ Kristi Jackson,  and , Pat Bazeley]',
+  price: new Decimal128("47.85"),
+  'price (including used books)': ' 44.95 - 47.85 ',
+  pages: 376,
+  avg_reviews: 4.6,
+  n_reviews: 110,
+  dimensions: '6.69 x 0.85 x 9.53 inches',
+  weight: '1.39 pounds',
+  language: 'English',
+  publisher: 'SAGE Publications Ltd; Third edition (May 31, 2019)',
+  ISBN_13: '978-1526449948',
+  link: '/Qualitative-Data-Analysis-with-NVivo/dp/1526449943/ref=sr_1_191?keywords=data+analysis&qid=1671164670&sr=8-191',
+  complete_link: 'https://www.amazon.com/Qualitative-Data-Analysis-with-NVivo/dp/1526449943/ref=sr_1_191?keywords=data+analysis&qid=1671164670&sr=8-191'
+}
+{
+  _id: '64907428760997866ad69fa0',
+  title: 'Essential R For Data Analysis: Data manipulation and visualization using R for beginning and intermediate users',
+  author: '[ PBR Books]',
+  pages: 146,
+  avg_reviews: 4.6,
+  n_reviews: 3,
+  language: 'English',
+  link: '/Essential-Data-Analysis-manipulation-visualization-ebook/dp/B074YG6KZN/ref=sr_1_184?keywords=data+analysis&qid=1671164670&sr=8-184',
+  complete_link: 'https://www.amazon.com/Essential-Data-Analysis-manipulation-visualization-ebook/dp/B074YG6KZN/ref=sr_1_184?keywords=data+analysis&qid=1671164670&sr=8-184'
+}
+{
+  _id: '64907428760997866ad69fa2',
+  title: "Black Feminism in Qualitative Inquiry: A Mosaic for Writing Our Daughter's Body (Futures of Data Analysis in Qualitative Research)",
+  price: new Decimal128("38.81"),
+  'price (including used books)': 38.81,
+  pages: 146,
+  avg_reviews: 4.9,
+  n_reviews: 51,
+  dimensions: '6.14 x 0.36 x 9.21 inches',
+  weight: '8 ounces',
+  language: 'English',
+  publisher: 'Routledge; 1st edition (February 7, 2019)',
+  ISBN_13: '978-1138486225',
+  link: '/Feminism-Qualitative-Inquiry-Analysis-Research/dp/1138486221/ref=sr_1_185?keywords=data+analysis&qid=1671164670&sr=8-185',
+  complete_link: 'https://www.amazon.com/Feminism-Qualitative-Inquiry-Analysis-Research/dp/1138486221/ref=sr_1_185?keywords=data+analysis&qid=1671164670&sr=8-185'
+}
+{
+  _id: '64907428760997866ad69fa6',
+  title: 'Exploratory Data Analysis with MATLAB (Chapman & Hall/CRC Computer Science & Data Analysis)',
+  price: new Decimal128("41.49"),
+  'price (including used books)': ' 16.26 - 41.49 ',
+  pages: 832,
+  avg_reviews: 4,
+  n_reviews: 3,
+  language: 'English',
+  publisher: 'Chapman and Hall/CRC; 3rd edition (August 7, 2017)',
+  link: '/Exploratory-Analysis-Chapman-Computer-Science-ebook/dp/B074MVTKM9/ref=sr_1_249?keywords=data+analysis&qid=1671164678&sr=8-249',
+  complete_link: 'https://www.amazon.com/Exploratory-Analysis-Chapman-Computer-Science-ebook/dp/B074MVTKM9/ref=sr_1_249?keywords=data+analysis&qid=1671164678&sr=8-249'
+}
+{
+  _id: '64907428760997866ad69fce',
+  title: 'Data and Analytics Strategy for Business: Unlock Data Assets and Increase Innovation with a Results-Driven Data Strategy',
+  author: '[ Simon Asplen-Taylor]',
+  price: new Decimal128("34.99"),
+  'price (including used books)': 34.99,
+  pages: 328,
+  avg_reviews: 4.6,
+  n_reviews: 3,
+  dimensions: '6.1 x 0.79 x 9.25 inches',
+  weight: '1.1 pounds',
+  language: 'English',
+  publisher: 'Kogan Page; 1st edition (June 28, 2022)',
+  ISBN_13: '978-1398606050',
+  link: '/Data-Analytics-Strategy-Business-Results-Driven/dp/1398606057/ref=sr_1_293?keywords=data+analysis&qid=1671164689&sr=8-293',
+  complete_link: 'https://www.amazon.com/Data-Analytics-Strategy-Business-Results-Driven/dp/1398606057/ref=sr_1_293?keywords=data+analysis&qid=1671164689&sr=8-293'
+}
+{
+  _id: '64907428760997866ad69fd6',
+  title: 'The Algorithm Design Manual (Texts in Computer Science)',
+  price: new Decimal128("73.99"),
+  'price (including used books)': ' 22.36 - 73.99 ',
+  pages: 810,
+  avg_reviews: 4.5,
+  n_reviews: 260,
+  dimensions: '7.7 x 1.6 x 9.4 inches',
+  weight: '3.46 pounds',
+  language: 'English',
+  publisher: 'Springer; 3rd ed. 2020 edition (October 6, 2020)',
+  ISBN_13: '978-3030542559',
+  link: '/Algorithm-Design-Manual-Computer-Science/dp/3030542556/ref=sr_1_285?keywords=data+analysis&qid=1671164689&sr=8-285',
+  complete_link: 'https://www.amazon.com/Algorithm-Design-Manual-Computer-Science/dp/3030542556/ref=sr_1_285?keywords=data+analysis&qid=1671164689&sr=8-285'
+}
+{
+  _id: '64907428760997866ad69ff7',
+  title: 'Python NumPy for Beginners: NumPy Specialization for Data Science (Python for Beginners in Data Science and Data Analysis Book 1)',
+  price: new Decimal128("9.99"),
+  'price (including used books)': 9.99,
+  pages: 220,
+  avg_reviews: 3.7,
+  n_reviews: 6,
+  language: 'English',
+  publisher: 'AI Publishing LLC (January 17, 2022)',
+  link: '/Python-NumPy-Beginners-Specialization-Analysis-ebook/dp/B09QNTX3JK/ref=sr_1_271?keywords=data+analysis&qid=1671164689&sr=8-271',
+  complete_link: 'https://www.amazon.com/Python-NumPy-Beginners-Specialization-Analysis-ebook/dp/B09QNTX3JK/ref=sr_1_271?keywords=data+analysis&qid=1671164689&sr=8-271'
+}
+{
+  _id: '64907428760997866ad6a048',
+  title: 'Qualitative Data Analysis with ATLAS.ti',
+  author: '[ Susanne Friese]',
+  price: new Decimal128("49.99"),
+  'price (including used books)': 49.99,
+  pages: 344,
+  avg_reviews: 4.7,
+  n_reviews: 33,
+  dimensions: '6.69 x 0.78 x 9.53 inches',
+  weight: '1.3 pounds',
+  language: 'English',
+  publisher: 'SAGE Publications Ltd; Third edition (April 22, 2019)',
+  ISBN_13: '978-1526458926',
+  link: '/Qualitative-Data-Analysis-with-ATLAS-ti/dp/1526458926/ref=sr_1_126?keywords=data+analysis&qid=1671164661&sr=8-126',
+  complete_link: 'https://www.amazon.com/Qualitative-Data-Analysis-with-ATLAS-ti/dp/1526458926/ref=sr_1_126?keywords=data+analysis&qid=1671164661&sr=8-126'
+}
+{
+  _id: '64907428760997866ad6a05c',
+  title: 'Data Mesh: Delivering Data-Driven Value at Scale',
+  author: '[ Zhamak Dehghani]',
+  price: new Decimal128("56.87"),
+  'price (including used books)': 56.87,
+  pages: 384,
+  avg_reviews: 4.5,
+  n_reviews: 138,
+  dimensions: '6.75 x 1 x 9 inches',
+  weight: '1.35 pounds',
+  language: 'English',
+  publisher: "O'Reilly Media; 1st edition (April 12, 2022)",
+  ISBN_13: '-19%',
+  link: '/Data-Mesh-Delivering-Data-Driven-Value/dp/1492092398/ref=sr_1_102?keywords=data+analysis&qid=1671164661&sr=8-102',
+  complete_link: 'https://www.amazon.com/Data-Mesh-Delivering-Data-Driven-Value/dp/1492092398/ref=sr_1_102?keywords=data+analysis&qid=1671164661&sr=8-102'
+}

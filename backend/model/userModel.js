@@ -66,6 +66,10 @@ async function checkUserExist(username){
     }
 }
 
+async function addNewUser(username,email,password){
+
+}
+
 // Export model
 //module.exports = userModel;
 module.exports={getUserByName,getUserById,getUserByEmail,checkUser,checkUserExist};
