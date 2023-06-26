@@ -10,6 +10,7 @@ import Login from './pages/login';
 import Signup from './pages/signup';
 import Contactus from "./pages/Contactus"
 import Privacy from './pages/Privacy';
+import Resource from './pages/resource';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/aboutus" Component={Aboutus} />
         <Route path="/contactus" Component={Contactus} />
         <Route path="/privacy" Component={Privacy} />
+        <Route path="/resource" Component={Resource} />
       </Routes>
     </div>
     <Footer/>
