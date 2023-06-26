@@ -8,7 +8,6 @@ const userSchema= new mongoose.Schema({
     name:String,
     email:String,
     password:String
-
 });
 // the Schema of users. It will connect to the "users" collection
 const User = mongoose.model("User",userSchema);
@@ -70,3 +69,4 @@ async function checkUserExist(username){
 // Export model
 //module.exports = userModel;
 module.exports={getUserByName,getUserById,getUserByEmail,checkUser,checkUserExist};
+
