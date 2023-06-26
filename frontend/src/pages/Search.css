@@ -1,0 +1,54 @@
+.search-container {
+  width: 95%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.resources-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.resource {
+  background-color: #aed9f9;
+  padding: 1rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.resource-image2 {
+  width: 30%;
+  border-radius: 4px;
+  margin-right: 1rem;
+}
+
+.resource-details2 {
+  flex: 1;
+}
+
+.resource-details2 h3 {
+  font-size: 1.2em;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  color: #000000; /* Set the desired color for the title */
+  pointer-events: none;
+}
+
+.resource-details2 p {
+  font-size: 0.8em;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  color: #000000; /* Set the desired color for the description */
+  pointer-events: none;
+}
+
+.resource-rating2 {
+  color: #ff9800;
+  font-size: 14px;
+  text-decoration: none;
+  pointer-events: none;
+}
+
