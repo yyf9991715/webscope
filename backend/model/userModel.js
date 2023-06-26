@@ -45,12 +45,12 @@ async function checkUser(username,password){
     if(retUser!==null&&retUser.password === password){
         console.log(`the check result of login:true`)
 
-        return true;
+        return "true";
     }
     else{
         console.log(`the check result of login:false`)
 
-        return false;
+        return "false";
     } 
 }
 async function checkUserExist(username){
@@ -58,11 +58,11 @@ async function checkUserExist(username){
     if(retUser!==null)
     {
         console.log(`the check result:true`)
-        return true;
+        return "true";
     }
     else {
         console.log(`the check result:true`)
-        return false;
+        return "false";
     }
 }
 

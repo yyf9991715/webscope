@@ -1,9 +1,9 @@
 var express = require('express');
-const bodyParser=require("body-parser")
-
+var bodyParser=require("body-parser")
+var cookieParser=require("cookie-parser")
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
-
+app.use(cookieParser());
 const user = require('./user.js');
 
 //both index.js and things.js should be in same directory
