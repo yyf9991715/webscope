@@ -9,13 +9,14 @@ const  Navbar=()=>{
         <Link to="/" className='site-title'>
             eLearningHelper
         </Link>
-        <div className="searchbar-container">
-                <Searchbar/>
-        </div>
+     
         
         <ul>
             <li>
-                <Link to="/user/accountsetting">User Profil </Link>
+                <Link to="/search">Search</Link>
+            </li>
+            <li>
+                <Link to="/user/accountsetting">User Profile </Link>
             </li>
             
             <li>

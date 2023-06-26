@@ -34,24 +34,24 @@ export default function Home (){
        <div className="sub-home2">
             
             <div className="left">
-                <Link to="/search" style={{textDecoration:"none"}}>
+               
                     <img src={searchimg} alt="p1" />
                     <p>Search for the topic you want to learn</p>
-                </Link>
+               
             </div>
 
             <div className="middle">
-                <Link to="/resource" style={{textDecoration:"none"}}>
+                
                     <img src={resourceimg} alt="p2" />
                     <p>Find the resource</p>
-                </Link>
+               
             </div>
 
             <div className="right">
-                <Link to="/reviewandrating" style={{textDecoration:"none"}}>
+                
                     <img src={ratingimg} alt="p3" />
                     <p>Share your review and rating</p>
-                </Link>
+                
                 
             </div>
        </div>

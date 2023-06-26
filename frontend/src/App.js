@@ -36,6 +36,7 @@ function App() {
         <Route path="/reviewandrating" Component={Reviewandrating} />
         <Route path="/user/:activepage" element={<Userprofilsetting/>} />
         <Route path="/chatgpt" Component={Chatgpt} />
+        
         <Route path="*" Component={
           <div>
             <h1>404 NOT FOUND</h1>
