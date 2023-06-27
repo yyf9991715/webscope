@@ -13,23 +13,18 @@ router.post("/auth", async function(req,res){
     console.log(`password:${data.password}`);
     retstr= await dbUser.checkUser(data.name,data.password);
     console.log(`the result of checkUser:${retstr}`);
-    let options={
-        httpOnly:true,
-        maxAge:1000*60*60
-    }
+
     if(retstr==="true"){
         userdata=await dbUser.getUserByName(data.name);
-        console.log("cookie create successfully");
         res.json({Status:"success",id:`${userdata.id}`});
     }
     else res.json({Status:"fail"});
 });
-router.get("/userdata", async function(req,res){
-    let usercookie=req.cookies;
-    console.log("Cookies:",usercookie.id);
-    userdata=await dbUser.getUserById(usercookie.id);
+router.get("/userdata/:id", async function(req,res){
+    console.log(req.params.id);
+    userdata=await dbUser.getUserById(req.params.id);
     console.log("this is the data of current user: ",userdata);
-    res.send(userdata);
+    res.json(userdata);
 })
 
 module.exports = router;

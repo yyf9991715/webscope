@@ -15,4 +15,7 @@ async function main(){
     });
     
 }
-main();
+async function test(){
+    
+}
+test();

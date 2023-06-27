@@ -24,9 +24,14 @@ async function getAllBook(){
     let result=await bookModel.find({}).exec();
     return result;
 }
+async function getAllBookName(){
+    let result=await bookModel.find({}).select("title").exec();
+    return result;
+}
+
 
 // async function getBookByKey(key){
 //     let result= await bookModel.find({title:{$regex}})
 // }
 // Export model
-module.exports = {bookModel,getAllBook};
+module.exports = {bookModel,getAllBook,getAllBookName};
