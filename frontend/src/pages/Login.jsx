@@ -1,8 +1,9 @@
 import "./Login.css"
-import { Link, redirect } from "react-router-dom";
+import { Link, redirect,useNavigate } from "react-router-dom";
 import Footer2 from "../components/Footer2";
 import axios from 'axios';
 import cookies from "js-cookie";
+import { useState } from "react";
 const style={
     theme:{
         height:"65vh"
@@ -10,28 +11,28 @@ const style={
 }
 
 export default function Login (){
-    const handlelogin=async(event)=>{
-        try {    
-            let param= new URLSearchParams();
-            param.append("name","yao");
-            param.append("password","test");
-            event.preventDefault();
-            let res= await axios.post(
-                "http://localhost:4000/user/auth",
-                param,
-                {
-                    'Content-Type' :'application/x-www-form-urlencoded',
+    const navigate=useNavigate()
+    const [error, setError] = useState('')
+    const [values,setValues]=useState({
+        name:" ",
+        password:" "
+    })
+    const handleSubmit=(event)=>{
+        event.preventDefault();
+        axios.post("http://localhost:4000/user/auth",values)
+            .then(res=>{
+                console.log(res)
+                if(res.data.Status === 'success') {
+                    navigate('/');
+                } else {
+                    setError(res.data.Error);
                 }
-            ).then(function(resb){
-                console.log(resb.data);
-                if(resb.data.Status==="success"){
-                    console.log("login success, the id is:",resb.data.id);
-                }
-            });
-        }catch(err){
-            console.error(err);
-        }
+
+            })
+            .catch(err=>console.log(err));
+
     }
+    
     return (
         <>
         <div style={style.theme} className="login">
@@ -39,11 +40,13 @@ export default function Login (){
                     <br />
                     <h1>Login to eLearningHelper</h1>
                 </div>
-                <form onSubmit={handlelogin}>
+                <form onSubmit={handleSubmit}>
                 <div className="form">
                     <div className="text">
-                            <input type="text" placeholder="Enter Email" className="inputext"/>
-                            <input type="password" placeholder="Enter Password" className="inputext"/>
+                            <input type="text" placeholder="Enter Username" className="inputext"
+                                onChange={e=>setValues({...values,name:e.target.value})}/>
+                            <input type="password" placeholder="Enter Password" className="inputext"
+                                onChange={e=>setValues({...values,password:e.target.value})}/>
                     </div>
                     <button type="submit">Login</button>
                 </div> 
