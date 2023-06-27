@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Search.css';
+import "../components/Searchbar"
+import Searchbar from '../components/Searchbar';
+import Resourcecard from '../components/Resourcecard';
 
 const Search = () => {
   const resources = [
@@ -56,29 +59,21 @@ const Search = () => {
 
   return (
     <div className="search-container">
+      <div className='searchbar-container'>
+        <Searchbar/>
+      </div>
       <div className="resources-container">
         {resources.map((resource, index) => (
           //<Link to={`/Resource/${index}`} key={index} className="resource-link">
-          <Link to={`/Resource`} className="resource-link">
-            <div className="resource">
-              <img
-                src={resource.image}
-                alt="Resource"
-                className="resource-image2"
+          
+              <Resourcecard
+                image={resource.image}
+                title={resource.title}
+                description={resource.description}
+                rating={resource.rating}
+                linkto={"/resource"}
               />
-              <div className="resource-details2">
-                <h3 className="resource-title2">
-                  {resource.title}
-                </h3>
-                <p className="resource-description2">
-                  {resource.description}
-                </p>
-                <div className="resource-rating2">
-                  Rating: {resource.rating}
-                </div>
-              </div>
-            </div>
-          </Link>
+         
         ))}
       </div>
     </div>

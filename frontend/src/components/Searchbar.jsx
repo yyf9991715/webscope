@@ -8,13 +8,11 @@ function Searchbar() {
     
   return (
     <>
-    <Link to="/search">
      <div className='input-wrapper'>
       
-          <input placeholder="Type to search..."/>
+          <input />
             <FaSearch id="search-icon"/>  
     </div>
-    </Link>
     </>
    
   );

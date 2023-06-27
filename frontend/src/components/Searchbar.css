@@ -2,7 +2,7 @@
     background-color:rgba(199, 194, 194, 0.347);
     width: 100%;
     border-radius: 20px;
-    height:2.5rem;
+    height:3.5rem;
     padding:0 15px;
     box-shadow: 0px 0px 0px #ddd;
     display: flex;
@@ -19,6 +19,7 @@ input{
 }
 input:focus{
     outline: none;
+    text-decoration: none;
 }
 #search-icon{
     color:black;

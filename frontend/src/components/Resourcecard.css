@@ -1,0 +1,50 @@
+
+
+  .resource {
+    background-color: #aed9f9;
+    padding: 1rem;
+    border-radius: 4px;
+    display: flex;
+  }
+  .resource-details{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .resource-image2 {
+    margin-top: 30%;
+    width: 30%;
+    height: 100%;
+    border-radius: 4px;
+  }
+  
+  .resource-details2 {
+    flex: 1;
+  }
+  
+  .resource-details2 h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    color: #000000; /* Set the desired color for the title */
+    pointer-events: none;
+  }
+  
+  .resource-details2 p {
+    font-size: 0.8em;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    color: #000000; /* Set the desired color for the description */
+    pointer-events: none;
+  }
+  
+  .resource-rating2 {
+    color: #ff9800;
+    font-size: 14px;
+    text-decoration: none;
+    pointer-events: none;
+  }
+
+  
+
+  
