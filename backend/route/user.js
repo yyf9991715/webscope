@@ -6,8 +6,9 @@ router.get("/",function(req,res){
     res.send("GET route on users");
 });
 
-router.post("/passwordcheck", async function(req,res){
+router.post("/auth", async function(req,res){
     let data=req.body;
+    //console.log(req);
     console.log(`name:${data.name}`);
     console.log(`password:${data.password}`);
     retstr= await dbUser.checkUser(data.name,data.password);
@@ -18,10 +19,10 @@ router.post("/passwordcheck", async function(req,res){
     }
     if(retstr==="true"){
         userdata=await dbUser.getUserByName(data.name);
-        res.cookie("id",`${userdata.id}`,options);
         console.log("cookie create successfully");
+        res.json({Status:"success",id:`${userdata.id}`});
     }
-    res.send(retstr);
+    else res.json({Status:"fail"});
 });
 router.get("/userdata", async function(req,res){
     let usercookie=req.cookies;

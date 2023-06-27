@@ -1,5 +1,5 @@
 const express = require("express");
-//const cors = require("cors");
+const cors = require("cors");
 //const booksModel = require("./model/dbbookSchema.js");
 const userModel = require("./model/userModel.js")
 
@@ -11,7 +11,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
 // Add CORS to all routes and methods
-//app.use(cors());
+app.use(cors({
+    origin: true,
+    credentials: true
+  }));
 
 // Enable parsing of JSON bodies
 app.use(express.json());

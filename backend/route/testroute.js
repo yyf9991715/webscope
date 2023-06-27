@@ -9,4 +9,4 @@ const user = require('./user.js');
 //both index.js and things.js should be in same directory
 app.use('/user', user);
 app.use(express.json());
-app.listen(3001);
+app.listen(4000);
