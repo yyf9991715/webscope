@@ -65,12 +65,66 @@ async function checkUserExist(username){
         return "false";
     }
 }
+async function checkIDExist(uid){
+    const retUser=await getUserById(uid);
+    if(retUser!==null)
+    {
+        console.log(`the check result:true`)
+        return true;
+    }
+    else {
+        console.log(`the check result:true`)
+        return false;
+    }
+}
+async function idGenerater(){
+    for(var i=1; i<50000;++i){
+        t=await checkIDExist(i)
+        if(t===false)return i;
+    }
+     return -1;
+}
+async function changePW(userID,newpw){
+    const retUser = await User.findOneAndUpdate({id:userID},{password:newpw});
+    console.log(retUser);
+    return retUser;
+}
+async function changeEmail(userID,newEmail){
+    const retUser = await User.findOneAndUpdate({id:userID},{email:newEmail});
+    console.log(retUser);
+    return retUser;
+}
+async function changeName(userID,newdata){
 
-async function addNewUser(username,email,password){
+    if(checkUserExist(newdata)==="true")
+    {
+        const retUser = await User.findOneAndUpdate({id:userID},{name:newdata});
 
+        console.log(retUser);
+
+        return retUser;
+    }
+    else return null;
 }
 
+async function addNewUser(newName, newPw,newMail){
+    newid=idGenerater();
+    const nUser= await User.create({id:newid,name:newName,password:newpw,email:newMail});
+    return nUser;
+}
 // Export model
 //module.exports = userModel;
-module.exports={getUserByName,getUserById,getUserByEmail,checkUser,checkUserExist};
+module.exports={
+    getUserByName,
+    getUserById,
+    getUserByEmail,
+    checkUser,
+    checkUserExist,
+    changePW,
+    checkIDExist,
+    addNewUser,
+    changeName,
+    changeEmail,
+    changePW,
+};
 

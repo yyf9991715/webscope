@@ -25,6 +25,11 @@ router.get("/userdata/:id", async function(req,res){
     userdata=await dbUser.getUserById(req.params.id);
     console.log("this is the data of current user: ",userdata);
     res.json(userdata);
-})
+});
 
+router.post("/createnewuser/",async function(req,res){
+    let data=req.body;
+    console.log(data);
+
+})
 module.exports = router;

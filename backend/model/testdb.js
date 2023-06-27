@@ -1,4 +1,5 @@
 const Book = require("./bookModel.js");
+const User = require("./userModel.js");
 
 async function main(){
     testdata=await Book.getAllBookName();
@@ -6,4 +7,9 @@ async function main(){
         console.log(testdata[i]);
     }
 }
-main();
+async function test()
+{
+    testdata=await User.idGenerater();
+    console.log(testdata);
+}
+test();
