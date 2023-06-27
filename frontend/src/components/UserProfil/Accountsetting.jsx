@@ -9,6 +9,17 @@ const Accountsetting = () => {
 
 
     <Grid container className="form">
+          <Grid item xs={12}md={12}>
+              <p>Username: </p>
+             <p>Email:</p>
+          </Grid>
+          <Grid item xs={12} md={12}>
+            <br />
+            <p>You could change your username and email:</p>
+          </Grid>
+          <Grid item xs={12} md={12}>
+            <br />
+          </Grid>
           <Grid item xs={12}md={12} className="form-group">
                 <TextField id="email" label="Email" variant="outlined" />
           </Grid>
@@ -28,6 +39,10 @@ const Accountsetting = () => {
            <Grid  item xs={12} md={12}>
                     <Button variant="contained" color="success">Save Change</Button>
            </Grid>
+
+           <Grid item xs={12} md={12}>
+            <br />
+          </Grid>
       
 
     </Grid>
