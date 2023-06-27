@@ -27,6 +27,7 @@ export default function Login (){
                 if(resb.data.Status==="success"){
                     console.log("login success, the id is:",resb.data.id);
                 }
+                else console.log("login failed");
             });
         }catch(err){
             console.error(err);
