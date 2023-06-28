@@ -23,7 +23,7 @@ async function getUserByName(name){
 async function getUserById(id){
 
     const retUser= await User.findOne(
-        {id:`${id}`}
+        {id:`${id}`},"id name email"
     ).exec();
     console.log(`find a User:\n${retUser}`)
     return retUser;

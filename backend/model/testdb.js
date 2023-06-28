@@ -7,9 +7,14 @@ async function main(){
         console.log(testdata[i]);
     }
 }
-async function test()
+async function testUser()
 {
-    testdata=await User.addNewUser("liu","test","liu@mail.com");
+    testdata=await User.getUserById(1);
     console.log(testdata);
 }
-test();
+async function testBook()
+{
+    testdata=await Book.getAllBookName
+    console.log(testdata);
+}
+testUser();

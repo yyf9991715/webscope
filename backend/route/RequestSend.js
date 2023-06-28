@@ -2,10 +2,10 @@ const axios=require("axios");
 
 async function main(){
     let param= new URLSearchParams();
-    param.append("id","2");
-    param.append("newname","liu");
+    param.append("name","liu");
+    param.append("password","test");
     await axios.post(
-        "http://localhost:4000/user/updateName",
+        "http://localhost:4000/user/auth",
         param,
         {
             'Content-Type' :'application/x-www-form-urlencoded',

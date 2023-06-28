@@ -23,7 +23,7 @@ const userroute = require('./route/user.js');
 
 //both index.js and things.js should be in same directory
 app.use('/user', userroute);
-app.listen(3001);
+app.listen(4000);
 // Define port
 const port = 4000;
 
