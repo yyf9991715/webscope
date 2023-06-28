@@ -10,7 +10,7 @@ const Accountsetting = () => {
 
     <Grid container className="form">
           <Grid item xs={12}md={12}>
-              <p>Username: </p>
+             <p>Username:</p>
              <p>Email:</p>
           </Grid>
           <Grid item xs={12} md={12}>

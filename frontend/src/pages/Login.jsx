@@ -3,7 +3,7 @@ import { Link, redirect,useNavigate } from "react-router-dom";
 import Footer2 from "../components/Footer2";
 import axios from 'axios';
 import cookies from "js-cookie";
-import { useState } from "react";
+import { useState ,useEffect} from "react";
 const style={
     theme:{
         height:"65vh"
@@ -11,26 +11,27 @@ const style={
 }
 
 export default function Login (){
+
     const navigate=useNavigate()
     const [error, setError] = useState('')
     const [values,setValues]=useState({
         name:" ",
         password:" "
     })
+
     const handleSubmit=(event)=>{
         event.preventDefault();
         axios.post("http://localhost:4000/user/auth",values)
             .then(res=>{
                 console.log(res)
+
                 if(res.data.Status === 'success') {
-                    navigate('/');
+                    navigate('/');  
                 } else {
                     setError(res.data.Error);
                 }
-
             })
             .catch(err=>console.log(err));
-
     }
     
     return (
@@ -55,6 +56,7 @@ export default function Login (){
                         Don't have an account? 
                         <Link to="/signup">Sign up </Link>
                 </div>
+                
         </div>
         <Footer2/>
         </>
