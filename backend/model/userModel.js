@@ -55,14 +55,15 @@ async function checkUser(username,password){
 }
 async function checkUserExist(username){
     const retUser=await getUserByName(username);
-    if(retUser!==null)
+    console.log(retUser)
+    if(retUser)
     {
         console.log(`the check result:true`)
-        return "true";
+        return true;
     }
     else {
-        console.log(`the check result:true`)
-        return "false";
+        console.log(`the check result:false`)
+        return false;
     }
 }
 async function checkIDExist(uid){
@@ -73,7 +74,7 @@ async function checkIDExist(uid){
         return true;
     }
     else {
-        console.log(`the check result:true`)
+        console.log(`the check result:false`)
         return false;
     }
 }
@@ -95,21 +96,23 @@ async function changeEmail(userID,newEmail){
     return retUser;
 }
 async function changeName(userID,newdata){
-
-    if(checkUserExist(newdata)==="true")
+    console.log(`the userid:${userID}, the new name:${newdata}`);
+    const exist=await checkUserExist(newdata);
+    console.log(exist);
+    if(exist===false)
     {
         const retUser = await User.findOneAndUpdate({id:userID},{name:newdata});
-
         console.log(retUser);
-
         return retUser;
     }
     else return null;
 }
 
 async function addNewUser(newName, newPw,newMail){
-    newid=idGenerater();
-    const nUser= await User.create({id:newid,name:newName,password:newpw,email:newMail});
+    newid=await idGenerater();
+    console.log(newid,newName,newPw,newMail );
+    console.log(typeof newid);
+    const nUser= await User.create({id:newid,name:newName,password:newPw,email:newMail});
     return nUser;
 }
 // Export model
@@ -124,7 +127,6 @@ module.exports={
     checkIDExist,
     addNewUser,
     changeName,
-    changeEmail,
-    changePW,
+    changeEmail
 };
 

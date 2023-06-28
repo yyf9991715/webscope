@@ -28,10 +28,11 @@ async function getAllBookName(){
     let result=await bookModel.find({}).select("title").exec();
     return result;
 }
+ 
 
-
-// async function getBookByKey(key){
-//     let result= await bookModel.find({title:{$regex}})
-// }
+async function getBookByKey(key){
+    let result= await bookModel.find({title:{$regex}});
+    
+}
 // Export model
 module.exports = {bookModel,getAllBook,getAllBookName};

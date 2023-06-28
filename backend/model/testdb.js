@@ -9,7 +9,7 @@ async function main(){
 }
 async function test()
 {
-    testdata=await User.idGenerater();
+    testdata=await User.addNewUser("liu","test","liu@mail.com");
     console.log(testdata);
 }
 test();

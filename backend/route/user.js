@@ -27,9 +27,35 @@ router.get("/userdata/:id", async function(req,res){
     res.json(userdata);
 });
 
+router.post("/updatePW",async function(req,res){
+    let data = req.body;
+    console.log(data);
+    if(data.id&&data.newpw){
+
+        const userstatus= await dbUser.changePW(data.id,data.newpw);
+        res.json({Status:userstatus});
+    }
+    else{
+        res.json({Status:"datafalse"})
+    }
+})
+router.post("/updateName",async function(req,res){
+    let data = req.body;
+    console.log(data);
+    const userstatus= await dbUser.changeName(data.id,data.newname);
+    res.json({Status:userstatus});
+})
+router.post("/updatePW",async function(req,res){
+    let data = req.body;
+    console.log(data);
+    const userstatus= await dbUser.changeEmail(data.id,data.newmail);
+    res.json({Status:userstatus});
+})
+
 router.post("/createnewuser/",async function(req,res){
     let data=req.body;
     console.log(data);
-
+    const nUserdata= dbUser.addNewUser(data.name,data.password,data.email);
+    res.json({Status:userstatus});
 })
 module.exports = router;
