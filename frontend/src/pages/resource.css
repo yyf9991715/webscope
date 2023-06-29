@@ -34,10 +34,14 @@
 
 .content-container {
   display: flex;
+  flex-direction: row;
+  width:100%;
+  justify-content: center;
 }
 
 .ratings {
   margin-right: 2rem;
+  width:50%;
 }
 
 .rating-item {
@@ -80,6 +84,7 @@
   max-width: 650px; /* Adjust the width as needed */
   align-self: flex-start;
   margin-left: auto;
+  width: 50%;
 }
 
 .opinion-text {

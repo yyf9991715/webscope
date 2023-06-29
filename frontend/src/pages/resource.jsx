@@ -1,5 +1,6 @@
 import React from 'react';
-import './resource.css';
+import './Resource.css';
+import Reviewandrating from '../components/Reviewandrating';
 
 const Resource = () => {
   const resourceData = {
@@ -49,6 +50,9 @@ const Resource = () => {
               </div>
             </div>
           ))}
+          <div>
+            <Reviewandrating/>
+          </div>
         </div>
         <div className="opinion-container">
           <div className="opinion-title">ChatGPT's Opinion</div>
