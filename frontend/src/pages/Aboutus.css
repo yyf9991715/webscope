@@ -1,0 +1,21 @@
+.body{
+    margin:60px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-rows: 100px 200px;
+    grid-template-columns: repeat(3, 200px);
+}
+.aboutus-title {
+    font-family:fantasy;
+    font-size: large;
+}
+.img{
+    text-align: left;
+}
+.sub-intro p{
+    font-family:'Courier New', Courier, monospace;
+}
+.sub-intro h2{
+    font-family:'Courier New', Courier, monospace;
+}
+

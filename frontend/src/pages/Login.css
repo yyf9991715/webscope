@@ -1,0 +1,57 @@
+*{
+  margin:0;
+  box-sizing: border-box;
+}
+
+
+.title h1{
+    color:#55c360;
+    font-family:'Times New Roman', Times, serif;
+  }
+.login{
+  background-color: white;
+  margin-left: 37%;
+  width:20em;
+  height:25em;
+  position: relative;
+  border-radius: 1em;
+  box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.text input{
+  height:3em;
+  border-radius: 0.25em;
+  text-align: center;
+  padding: 2em;
+
+}
+.form button{
+  background-color: #55c360;
+  border:none;
+  cursor: pointer;
+  width:40%;
+  height: 3em;
+
+}
+.inputext{
+  margin:10px;
+}
+
+.form button:hover{
+  transform: scale(1.25);
+}
+  .signup-link {
+    margin-top: 20px;
+  }
+  .signup-link p{
+    font-size: 12px ;
+  }
+  .signup-link a{
+    font-size: 14px;
+    color:green;
+  }
+  
+

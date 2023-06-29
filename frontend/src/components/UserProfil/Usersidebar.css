@@ -1,0 +1,37 @@
+.usersidebar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.usersidebar .session1 , .usersidebar .session2{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.usersidebar .session1 svg {
+    width: 30px;
+    height: 30px;
+    color: gray;
+}
+.usersidebar .session2 svg {
+    width: 30px;
+    height: 30px;
+    color: grey;
+}
+
+.usersidebar .session1:hover{
+    background-color: rgb(246, 246, 246);
+    border-radius: 5px;
+    cursor: pointer;
+    color: grey;
+}
+.usersidebar .session2{
+    background-color: rgb(246, 246, 246);
+    border-radius: 5px;
+    cursor: pointer;
+    color: grey;
+}

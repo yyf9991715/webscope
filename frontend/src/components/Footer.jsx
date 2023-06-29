@@ -7,6 +7,7 @@ const Footer=()=>{
         <>
         <div className='footer'>
            <div className='sb_footer session_aboutus'>
+
                 <div className='sb_footer-links'>
                     
                     <div className='sb_footer-links-div'>

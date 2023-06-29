@@ -6,17 +6,20 @@ import Aboutus from  "./pages/Aboutus"
 import Home from "./pages/Home"
 import Userprofilsetting from './pages/Userprofilsetting';
 import { Route, Routes } from "react-router-dom"
-import Login from './pages/login';
-import Signup from './pages/signup';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
 import Contactus from "./pages/Contactus"
 import Privacy from './pages/Privacy';
-import Resource from './pages/resource';
-
+import {Grid } from '@mui/material';
+import Search from "./pages/Search";
+import Resource from "./pages/Resource"
+import Chatgpt from "./pages/Chatgpt"
 
 function App() {
   return (
     
     <>
+    
     <Navbar />
     <div className="container">
       <Routes>
@@ -27,10 +30,22 @@ function App() {
         <Route path="/aboutus" Component={Aboutus} />
         <Route path="/contactus" Component={Contactus} />
         <Route path="/privacy" Component={Privacy} />
+        <Route path="/search" Component={Search} />
         <Route path="/resource" Component={Resource} />
-      </Routes>
+        <Route path="/user/:activepage" element={<Userprofilsetting/>} />
+        <Route path="/chatgpt" Component={Chatgpt} />
+        
+        <Route path="*" Component={
+          <div>
+            <h1>404 NOT FOUND</h1>
+          </div>
+        }/>
+        </Routes>
     </div>
-    <Footer/>
+    <Grid container xs={12}md={12}>
+        <Footer/>
+    </Grid>
+    
   </>
 
     
