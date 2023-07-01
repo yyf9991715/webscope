@@ -1,5 +1,5 @@
 import React from 'react';
-import './Resource.css';
+import './resource.css';
 import Reviewandrating from '../components/Reviewandrating';
 
 const Resource = () => {

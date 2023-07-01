@@ -12,7 +12,7 @@ import Contactus from "./pages/Contactus"
 import Privacy from './pages/Privacy';
 import {Grid } from '@mui/material';
 import Search from "./pages/Search";
-import Resource from "./pages/Resource"
+import Resource from "./pages/resource"
 import Chatgpt from "./pages/Chatgpt"
 
 function App() {

@@ -3,10 +3,10 @@ import { Link, redirect,useNavigate } from "react-router-dom";
 import Footer2 from "../components/Footer2";
 import axios from 'axios';
 import cookies from "js-cookie";
-import { useState ,useEffect} from "react";
+import { useState} from "react";
 const style={
     theme:{
-        height:"65vh"
+        height:"85vh"
     }
 }
 
@@ -26,8 +26,11 @@ export default function Login (){
                 console.log(res)
 
                 if(res.data.Status === 'success') {
-                    navigate('/');  
+                    
+                        navigate('/');  
+                    
                 } else {
+                    alert("username or password is wrong!")
                     setError(res.data.Error);
                 }
             })
@@ -58,7 +61,7 @@ export default function Login (){
                 </div>
                 
         </div>
-        <Footer2/>
+        
         </>
        
     );
