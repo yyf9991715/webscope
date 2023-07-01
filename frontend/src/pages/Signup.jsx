@@ -23,7 +23,7 @@ export default function Signup (){
             axios.post("http://localhost:4000/user/createnewuser",values)
             .then(res=>{
                 if(res.data.Status === 'success') {
-                    console.log("add new user")
+                    alert("already successfully sign up, you could login in now!");
                 } else if(res.data.Status === 'pwddifferent'){
                     alert("twice inputting password are different!");
                 }else{
