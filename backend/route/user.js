@@ -29,7 +29,6 @@ router.get("/userdata", async function(req,res){
     let usercookie=req.cookies;
     let userid=usercookie.id;
     console.log(req.cookies)
-
     if(userid){
         console.log(userid)
         userdata=await dbUser.getUserById(userid);
@@ -69,7 +68,8 @@ router.post("/createnewuser/",async function(req,res){
     let data=req.body;
     console.log(data);
     const nUserdata= dbUser.addNewUser(data.name,data.password,data.email);
-    res.json({Status:userstatus});
+    if(nUserdata)res.json({Status:"success"});
+    else res.json({Status:"failed"});
 })
 
 router.post("/isloged",async function(req,res){
