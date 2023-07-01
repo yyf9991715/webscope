@@ -35,15 +35,18 @@ router.get("/userdata", async function(req,res){
         console.log("this is the data of current user: ",userdata);
         res.json({Status:"success",data:userdata});
     }
-    else     res.json({Status:"failed"});
+    else res.json({Status:"failed"});
 
 });
-
+async function getCookiesID(req){
+    let userid=req.cookies.id;
+    if(userid)return userid;
+    else return null;
+}
 router.post("/updatePW",async function(req,res){
     let data = req.body;
     console.log(data);
     if(data.id&&data.newpw){
-
         const userstatus= await dbUser.changePW(data.id,data.newpw);
         res.json({Status:"success",data:userstatus});
     }
@@ -53,15 +56,27 @@ router.post("/updatePW",async function(req,res){
 })
 router.post("/updateName",async function(req,res){
     let data = req.body;
-    console.log(data);
-    const userstatus= await dbUser.changeName(data.id,data.newname);
-    res.json({Status:"success",data:userstatus});
+    let id=getCookiesID(req);
+    if(id!==null){
+
+        console.log(data);
+        const userstatus= await dbUser.changeName(id,data.newname);
+        res.json({Status:"success",data:userstatus});
+    }
+    else res.json({Status:"failed"})
 })
 router.post("/updateemail",async function(req,res){
     let data = req.body;
     console.log(data);
-    const userstatus= await dbUser.changeEmail(data.id,data.newmail);
-    res.json({Status:"success",data:userstatus});
+
+        let id=getCookiesID(req);
+        if(id!==null){
+        const userstatus= await dbUser.changeEmail(id,data.newmail);
+        res.json({Status:"success",data:userstatus});
+
+    }
+
+    else res.json({Status:"failed"})
 })
 
 router.post("/createnewuser/",async function(req,res){
@@ -78,6 +93,8 @@ router.post("/createnewuser/",async function(req,res){
 })
 
 router.post("/isloged",async function(req,res){
-
+    let myid= getCookiesID(req);
+    if(id!==null)res.json({Status:"success",id:id});
+    else res.json({Status:"failed"})
 })
 module.exports = router;
