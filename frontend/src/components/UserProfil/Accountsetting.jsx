@@ -2,6 +2,14 @@ import React from 'react'
 import { TextField,Grid ,Button} from '@mui/material';
 
 const Accountsetting = () => {
+  async function useEffect(){
+    let userData= fetch("localhost:4000/user/userdata").then(response=>{
+      return response.json()
+    })
+    .then(data=>{
+      console.log(data);
+    })
+  }
   return (
     <>
     <div className='accountsetting'>

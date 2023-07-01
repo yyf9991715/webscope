@@ -92,9 +92,9 @@ router.post("/createnewuser/",async function(req,res){
     
 })
 
-router.post("/isloged",async function(req,res){
+router.get("/isloged",async function(req,res){
     let myid= getCookiesID(req);
     if(id!==null)res.json({Status:"success",id:id});
-    else res.json({Status:"failed"})
+    else res.json({Status:"failed"});
 })
 module.exports = router;
