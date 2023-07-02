@@ -12,14 +12,14 @@ const style={
 export default function Signup (){
     const [error, setError] = useState('')
     const [values,setValues]=useState({
-        name:" ",
-        email:" ",
-        password:" ",
-        passwordagain:" "
+        name:"",
+        email:"",
+        password:"",
+        passwordagain:""
     })
     const handleSubmit=(event)=>{
         event.preventDefault();
-        
+        if(values.name&&values.email&&values.password&&values.passwordagain){
             axios.post("http://localhost:4000/user/createnewuser",values)
             .then(res=>{
                 if(res.data.Status === 'success') {
@@ -31,6 +31,9 @@ export default function Signup (){
                 }
             })
             .catch(err=>console.log(err));
+        }else{
+            alert("please complete all");
+        }
     }
     return (
         <>
