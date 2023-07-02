@@ -28,7 +28,7 @@ router.post("/querykey",async function(req,res){
 });
 
 
-router.post("/rating",async function(req,res){
+router.get("/rating",async function(req,res){
     res.json({})
 })
 module.exports = router;

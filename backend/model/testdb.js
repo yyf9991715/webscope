@@ -32,4 +32,4 @@ async function testgetBookDetail(){
     console.log(testdata);
 }
 
-testgetBookDetail()
+testgetAllBookName()

@@ -47,7 +47,7 @@ async function getAllBook(){
 }
 
 async function getAllBookName(){
-    let result=await bookModel.find({}).select("title author").exec();
+    let result=await bookModel.find({}).select("title author avg_reviews").exec();
     return result;
 }
 
