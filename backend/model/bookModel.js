@@ -6,7 +6,7 @@ const collectionName = process.env.DB_COLLECTION;
 
 // Create mongoose schema
 const bookSchema = new mongoose.Schema({
-    _id:String,
+    _id:{ type: mongoose.ObjectId, required: true },
     title:String,
     price:mongoose.Decimal128,
     n_reviews:Number,
@@ -58,16 +58,19 @@ async function getBookByKey(key){
 }
 
 async function getBookDetail(id){
-    let qid=new ObjectId(id);
-    console.log(qid);
-    let result = await bookModel.findOne({_id:qid}).exec();
-
+    // let qid=new ObjectId(id);
+    console.log(id);
+    let result = await bookModel.findById(id);
     return result;
 }
-
+ 
 
 async function getBookRating(id){
     const book= await getBookDetail(id);
+    console.log(book);
+    if(book.avg_reviews){
+
+    }
     return book.avg_reviews;
 }
 

@@ -11,11 +11,24 @@ router.get("/getall",async function(req,res){
     res.json({Bookdata:book.slice(0,20)});
 });
 
-router.post("/detail",async function(req,res){
-    let qid=req.data.bookid;
-    let book=await dbBook.getBookDetail(qid);
-    res.json({resbook:book})
-})
+router.get("/detail/:bookid",async function(req,res){
+    let qid=req.params.bookid;
+    if(qid){
+        let book=await dbBook.getBookDetail(qid);
+        console.log(book);
+        res.json({Status:"success",resbook:book});
+    }
+    else res.json({Status:"failed"});
+});
 
-router.get("/")
+router.post("/querykey",async function(req,res){
+    let keyword=req.data.keyword;
+    let booklist= await dbBook.getBookByKey(keyword);
+    res.json(booklist);
+});
+
+
+router.post("/rating",async function(req,res){
+    res.json({})
+})
 module.exports = router;
