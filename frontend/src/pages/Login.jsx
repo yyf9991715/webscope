@@ -23,8 +23,6 @@ export default function Login (){
         event.preventDefault();
         axios.post("http://localhost:4000/user/auth",values)
             .then(res=>{
-                console.log(res)
-
                 if(res.data.Status === 'success') {
                         console.log(res.data.id);
                         localStorage.setItem("userid",res.data.id);
