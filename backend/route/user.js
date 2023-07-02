@@ -46,7 +46,7 @@ async function getCookiesID(req){
 router.post("/updatePW",async function(req,res){
     let data = req.body;
     console.log(data);
-    if(data.id&&data.newpw){
+    if(data.id&&data.password&&data.passwordagain&&data.password===data.passwordagain){
         const userstatus= await dbUser.changePW(data.id,data.newpw);
         res.json({Status:"success",data:userstatus});
     }
@@ -54,6 +54,20 @@ router.post("/updatePW",async function(req,res){
         res.json({Status:"failed"})
     }
 })
+
+router.post("/upuserpro",async function(req,res){
+    let data = req.body;
+    let id=getCookiesID(req);
+    if(id!==null){
+        console.log(data);
+        if(data.newname)await dbUser.changeName(id,data.newname);
+        if(data.newmail)await dbUser.changeEmail(id,data.newmail);
+        let userstatus= await dbUser.getUserById(id);
+        res.json({Status:"success",data:userstatus});
+    }
+    else res.json({Status:"failed"})
+})
+
 router.post("/updateName",async function(req,res){
     let data = req.body;
     let id=getCookiesID(req);
