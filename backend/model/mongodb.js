@@ -11,13 +11,13 @@ const dbUrl =  "mongodb+srv://webscope:webscope@cluster0.wv8jnc3.mongodb.net/?re
 
 // create database connection
 mongoose.connect(dbUrl, 
-  {
-    dbName:dbName
-  })
-  .then(()=>{
-    console.log("connected to DB");
-  })
-  .catch((err)=>{
-    console.log("Error connection to DB",err);
-  })
+    {
+        dbName:dbName
+    })
+    .then(()=>{
+        console.log("connected to DB");
+    })
+    .catch((err)=>{
+        console.log("Error connection to DB",err);
+    })
 module.exports = mongoose;

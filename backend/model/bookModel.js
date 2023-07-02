@@ -11,7 +11,7 @@ const bookSchema = new mongoose.Schema({
     price:mongoose.Decimal128,
     n_reviews:Number,
     avg_reviews:{
-        type: mongoose.Decimal128
+        type: mongoose.Decimal128,
     },
     publisher:String,
     pages:Number,
@@ -19,19 +19,19 @@ const bookSchema = new mongoose.Schema({
     dimensions:String,
     author:String,
     star5:{
-        type: mongoose.Decimal128
+        type: mongoose.Decimal128,
     },
     star4:{
-        type: mongoose.Decimal128
+        type: mongoose.Decimal128,
     },
     star3:{
-        type: mongoose.Decimal128
+        type: mongoose.Decimal128,
     },
     star2:{
-        type: mongoose.Decimal128
+        type: mongoose.Decimal128,
     },
     star1:{
-        type: mongoose.Decimal128
+        type: mongoose.Decimal128,
     },
     ISBN_13:String,
     link:String,
@@ -48,6 +48,8 @@ async function getAllBook(){
 
 async function getAllBookName(){
     let result=await bookModel.find({}).select("title author avg_reviews").exec();
+
+    //console.log(result.slice(0,10));
     return result;
 }
 

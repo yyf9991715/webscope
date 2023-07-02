@@ -15,11 +15,15 @@ async function testUser()
 async function testgetAllBook()
 {
     testdata=await Book.getAllBook()
-    console.log(testdata);
+    console.log(testdata.slice(0,20));
 }
 
 async function testgetAllBookName(){
-    testdata=await Book.getAllBookName()
+    testdata=await Book.getAllBookName();
+    testdata=testdata.slice(0,20)
+    for(i=0;i<testdata.length;++i){
+        if(testdata[i].avg_reviews)testdata[i].avg_reviews=testdata[i].avg_reviews.toString();
+    }
     console.log(testdata);
 }
 
