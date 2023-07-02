@@ -65,7 +65,7 @@ router.post("/updatePW",async function(req,res){
 
 router.post("/upuserpro",async function(req,res){
     let data = req.body;
-    let id=getCookiesID(req);
+    let id=req.body.id;
     if(id!==null){
         console.log(data);
         if(data.newname&&data.newname!=="")await dbUser.changeName(id,data.newname);
