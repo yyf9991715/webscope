@@ -6,17 +6,16 @@ const Accountsetting = () => {
   let username=localStorage.getItem("userName");
 
   let useremail = localStorage.getItem("userEmail");
-  async function fetchUserData(){
-    console.log(localStorage.getItem("userName"));
-    // let userData=  await fetch("/user/userdata").then(response=>{
-    //   console.log(response);
-    //   return response.json();
-    // })
-    // .then(data=>{
-    //   console.log(data);
-    // })
-  }
-  fetchUserData();
+  // async function fetchUserData(){
+  //   console.log(localStorage.getItem("userName"));
+  //   // let userData=  await fetch("/user/userdata").then(response=>{
+  //   //   console.log(response);
+  //   //   return response.json();
+  //   // })
+  //   // .then(data=>{
+  //   //   console.log(data);
+  //   // })
+  // }
   return (
     <>
     <div className='accountsetting'>
