@@ -1,3 +1,4 @@
+const { ObjectId } = require("mongodb");
 const mongoose = require("./mongodb.js");
 
 // Initialize parameters
@@ -57,7 +58,10 @@ async function getBookByKey(key){
 }
 
 async function getBookDetail(id){
-    let result = await bookModel.findOne({_id:id}).exec();
+    let qid=new ObjectId(id);
+    console.log(qid);
+    let result = await bookModel.findOne({_id:qid}).exec();
+
     return result;
 }
 

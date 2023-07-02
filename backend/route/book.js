@@ -9,5 +9,13 @@ router.get("/getall",async function(req,res){
     let book=await dbBook.getAllBookName();
     console.log("get all book name");
     res.json({Bookdata:book.slice(0,20)});
+});
+
+router.post("/detail",async function(req,res){
+    let qid=req.data.bookid;
+    let book=await dbBook.getBookDetail(qid);
+    res.json({resbook:book})
 })
+
+router.get("/")
 module.exports = router;

@@ -23,4 +23,13 @@ async function testgetAllBookName(){
     console.log(testdata);
 }
 
-testgetAllBookName()
+async function testgetBookByKey(){
+    testdata=await Book.getBookByKey("Python");
+    console.log(testdata);
+}
+async function testgetBookDetail(){
+    testdata=await Book.getBookDetail("64907428760997866ad6a048")
+    console.log(testdata);
+}
+
+testgetBookDetail()
