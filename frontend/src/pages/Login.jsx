@@ -26,7 +26,11 @@ export default function Login (){
                 console.log(res)
 
                 if(res.data.Status === 'success') {
-                    
+                        console.log(res.data.id);
+                        localStorage.setItem("userid",res.data.id);
+                        localStorage.setItem("userName",res.data.name);
+                        localStorage.setItem("userEmail",res.data.email);
+
                         navigate('/');  
                     
                 } else {

@@ -2,14 +2,21 @@ import React from 'react'
 import { TextField,Grid ,Button} from '@mui/material';
 
 const Accountsetting = () => {
-  async function useEffect(){
-    let userData= fetch("localhost:4000/user/userdata").then(response=>{
-      return response.json()
-    })
-    .then(data=>{
-      console.log(data);
-    })
+
+  let username=localStorage.getItem("userName");
+
+  let useremail = localStorage.getItem("userEmail");
+  async function fetchUserData(){
+    console.log(localStorage.getItem("userName"));
+    // let userData=  await fetch("/user/userdata").then(response=>{
+    //   console.log(response);
+    //   return response.json();
+    // })
+    // .then(data=>{
+    //   console.log(data);
+    // })
   }
+  fetchUserData();
   return (
     <>
     <div className='accountsetting'>
@@ -18,8 +25,8 @@ const Accountsetting = () => {
 
     <Grid container className="form">
           <Grid item xs={12}md={12}>
-             <p>Username:</p>
-             <p>Email:</p>
+             <p>Username:{username}</p>
+             <p>Email:{useremail}</p>
           </Grid>
           <Grid item xs={12} md={12}>
             <br />

@@ -21,14 +21,14 @@ router.post("/auth", async function(req,res){
         userdata=await dbUser.getUserByName(data.name);
         console.log(`${userdata.id}`)
         res.cookie("id",`${userdata.id}`,options);
-        res.json({Status:"success",id:`${userdata.id}`});
+        res.json({Status:"success",id:`${userdata.id}`,name:userdata.name,email:userdata.email});
     }
     else res.json({Status:"fail"});
 });
 router.get("/userdata", async function(req,res){
     let usercookie=req.cookies;
-    let userid=usercookie.id;
-    console.log(req.cookies)
+    let userid=usercookie.id; 
+    console.log(req.cookies);
     if(userid){
         console.log(userid)
         userdata=await dbUser.getUserById(userid);
