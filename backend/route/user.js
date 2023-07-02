@@ -68,8 +68,8 @@ router.post("/upuserpro",async function(req,res){
     let id=getCookiesID(req);
     if(id!==null){
         console.log(data);
-        if(data.newname)await dbUser.changeName(id,data.newname);
-        if(data.newmail)await dbUser.changeEmail(id,data.newmail);
+        if(data.newname&&data.newname!=="")await dbUser.changeName(id,data.newname);
+        if(data.newmail&&data.newmail!=="")await dbUser.changeEmail(id,data.newmail);
         let userstatus= await dbUser.getUserById(id);
         res.json({Status:"success",data:userstatus});
     }
