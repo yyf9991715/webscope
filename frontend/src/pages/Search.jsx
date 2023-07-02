@@ -10,7 +10,8 @@ const Search = () => {
   
 const [values,setValues]=useState([{
   title:"",
-  author:"unkown"
+  author:"unkown",
+  avg_reviews:""
 }])
 useEffect(()=>{
   fetch("http://localhost:4000/book/getall",{
@@ -19,6 +20,10 @@ useEffect(()=>{
     .then((res)=>res.json())
     .then((data)=>{
       console.log(data,"bookdata");
+      let books=data.Bookdata;
+      for(let i=0;i<books.length;++i){
+        if(books[i].avg_reviews)books[i].avg_reviews=books[i].avg_reviews.$numberDecimal;
+      }
       setValues(data.Bookdata)
     })
 },[]);
@@ -38,6 +43,7 @@ useEffect(()=>{
                 
                 title={value.title}
                 author={value.author?value.author:"unknown"}
+                rating={value.avg_reviews}
                 linkto={"/resource/"+value._id}
                 
               />

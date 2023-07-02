@@ -9,7 +9,7 @@ const style={
         color:"gray"
     }
 }
-function Resourcecard({title,author,linkto}) {
+function Resourcecard({title,author,rating,linkto}) {
   return (
     <div>
         <div className="resource">
@@ -21,7 +21,7 @@ function Resourcecard({title,author,linkto}) {
                   author:{author}
                 </div>
                 <div className="resource-rating2">
-                  Rating: 4.5
+                  Rating: {rating}
                 </div>
               
               <div className='resource-link'>

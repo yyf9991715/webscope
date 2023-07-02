@@ -1,8 +1,25 @@
-import React from 'react';
+import React, { useEffect,useState } from 'react';
 import './resource.css';
 import Reviewandrating from '../components/Reviewandrating';
+import {useParams} from "react-router-dom"
+import axios from 'axios';
 
-const Resource = () => {
+const Resource = (props) => {
+  const {id} = useParams();
+  const bookid=id;
+  const [values,setValues]=useState({});
+  console.log(bookid);
+  
+  useEffect(()=>{
+      axios.get('http://localhost:4000/book/detail/'+bookid)
+        .then(res=>{
+          let resbook=res.data.resbook;
+          if(resbook.avg_reviews) resbook.avg_reviews=resbook.avg_reviews.$numberDecimal;
+          if(resbook.price) resbook.price=resbook.price.$numberDecimal;
+          setValues(resbook);
+        }).catch(err=>console.log(err))
+
+  },[]);
   const resourceData = {
     image: 'https://toppng.com/uploads/preview/code-interrogation-blank-red-book-cover-11569063098n6btr5iejc.png',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut mauris et massa venenatis interdum. Proin ultrices auctor ligula, ac dignissim massa congue vitae. Sed consectetur, justo et volutpat finibus, nunc sem tincidunt arcu, id sollicitudin mi arcu et turpis. In id felis sed tortor luctus pulvinar. Aliquam quis pharetra felis. Phasellus ac mauris quis libero congue auctor. In consequat neque ac magna varius, ac fringilla dolor bibendum. Donec maximus laoreet tortor, ut pharetra tortor eleifend in. Etiam facilisis pellentesque mi nec pretium.',
@@ -28,10 +45,14 @@ const Resource = () => {
           <img src={resourceData.image} alt="Resource" />
         </div>
         <div className="resource-details">
-          <h2>Title</h2>
-          <p>{resourceData.description}</p>
+          <h2> {values.title}</h2>
+          <p>Price:{values.price}</p>
+          <p>Pages:{values.pages?values.pages:"null"}</p>
+          <p>Number of reviews:{values.n_reviews}</p>
+          <p>Language:{values.language?values.language:"null"}</p>
+          <p>Complete Link:{values.complete_link?values.complete_link:"null"}</p>
           <div className="average-rating">
-            Average Rating: {resourceData.averageRating}
+            Average Rating: {values.avg_reviews}
           </div>
         </div>
       </div>

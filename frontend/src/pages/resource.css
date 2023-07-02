@@ -1,6 +1,6 @@
 .resource-container {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   margin-top: 2rem;
 }
 
@@ -12,24 +12,28 @@
 }
 
 .resource-details {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .resource-details h2 {
   font-size: 30px;
   margin-bottom: 1rem;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .resource-details p {
   font-size: 20px;
   line-height: 1.5;
   margin-bottom: 1rem;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .average-rating {
   color: #ff9800;
   font-size: 25px;
   margin-bottom: 4rem;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .content-container {
