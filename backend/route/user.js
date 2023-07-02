@@ -27,7 +27,7 @@ router.post("/auth", async function(req,res){
 });
 router.get("/userdata", async function(req,res){
     let usercookie=req.cookies;
-    let userid=req.body.id; 
+    let userid=usercookie.id; 
     console.log(req.cookies);
     if(userid){
         console.log(userid)
@@ -38,8 +38,8 @@ router.get("/userdata", async function(req,res){
     else res.json({Status:"failed"});
 
 });
-async function getID(req){
-    let userid=req.body.id;
+async function getCookiesID(req){
+    let userid=req.cookies.id;
     if(userid)return userid;
     else return null;
 }
@@ -58,6 +58,7 @@ router.post("/updateName",async function(req,res){
     let data = req.body;
     let id=getCookiesID(req);
     if(id!==null){
+
         console.log(data);
         const userstatus= await dbUser.changeName(id,data.newname);
         res.json({Status:"success",data:userstatus});
@@ -67,8 +68,9 @@ router.post("/updateName",async function(req,res){
 router.post("/updateemail",async function(req,res){
     let data = req.body;
     console.log(data);
-    let id=getCookiesID(req);
-    if(id!==null){
+
+        let id=getCookiesID(req);
+        if(id!==null){
         const userstatus= await dbUser.changeEmail(id,data.newmail);
         res.json({Status:"success",data:userstatus});
 
