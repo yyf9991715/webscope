@@ -2,10 +2,12 @@ const axios=require("axios");
 
 async function main(){
     let param= new URLSearchParams();
-    param.append("name","liu");
-    param.append("password","test");
+    param.append("id","1");
+    param.append("password","testn");
+    param.append("passwordagain","testn");
+
     await axios.post(
-        "http://localhost:4000/user/auth",
+        "http://localhost:4000/user/updatePW",
         param,
         {
             'Content-Type' :'application/x-www-form-urlencoded',

@@ -39,19 +39,27 @@ router.get("/userdata", async function(req,res){
 
 });
 async function getCookiesID(req){
-    let userid=req.cookies.id;
+    let userid=req.body.id;
     if(userid)return userid;
     else return null;
 }
 router.post("/updatePW",async function(req,res){
     let data = req.body;
     console.log(data);
-    if(data.id&&data.password&&data.passwordagain&&data.password===data.passwordagain){
-        const userstatus= await dbUser.changePW(data.id,data.newpw);
-        res.json({Status:"success",data:userstatus});
+    if(data.id){
+        if(data.password&&data.passwordagain){
+
+            if(data.password===data.passwordagain){
+                await dbUser.changePW(data.id,data.newpw);
+                const userstatus= await dbUser.getUserById(data.id);
+                res.json({Status:"success",data:userstatus});
+            }
+            else res.json({Status:"pwddifferent"})
+        }
+        else res.json({Status:"emptyinput"});
     }
     else{
-        res.json({Status:"failed"})
+        res.json({Status:"notloged"});
     }
 })
 
