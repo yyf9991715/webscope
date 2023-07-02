@@ -5,6 +5,8 @@
     padding: 1rem;
     border-radius: 4px;
     display: flex;
+    flex-direction: column;
+    align-items:normal;
   }
   .resource-details{
     display: flex;
@@ -18,20 +20,18 @@
     border-radius: 4px;
   }
   
-  .resource-details2 {
-    flex: 1;
-  }
-  
-  .resource-details2 h3 {
+  .resource-details2 h4 {
     font-size: 1.2em;
     margin-bottom: 0.5rem;
     text-decoration: none;
     color: #000000; /* Set the desired color for the title */
     pointer-events: none;
+    font-family: 'Times New Roman', Times, serif;
   }
   
-  .resource-details2 p {
-    font-size: 0.8em;
+  .resource-description2 {
+    font-size:medium;
+    font-family: 'Times New Roman', Times, serif;
     margin-bottom: 0.5rem;
     text-decoration: none;
     color: #000000; /* Set the desired color for the description */
@@ -43,6 +43,7 @@
     font-size: 14px;
     text-decoration: none;
     pointer-events: none;
+    font-family: 'Times New Roman', Times, serif;
   }
 
   

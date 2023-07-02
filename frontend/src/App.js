@@ -31,7 +31,7 @@ function App() {
         <Route path="/contactus" Component={Contactus} />
         <Route path="/privacy" Component={Privacy} />
         <Route path="/search" Component={Search} />
-        <Route path="/resource" Component={Resource} />
+        <Route path="/resource/:id" Component={Resource} />
         <Route path="/user/:activepage" element={<Userprofilsetting/>} />
         <Route path="/chatgpt" Component={Chatgpt} />
         
