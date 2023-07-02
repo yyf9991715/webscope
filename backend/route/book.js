@@ -8,6 +8,6 @@ router.get("/",function(req,res){
 router.get("/getall",async function(req,res){
     let book=await dbBook.getAllBookName();
     console.log("get all book name");
-    res.json(book);
-} )
+    res.json(book.slice(0,20));
+})
 module.exports = router;
