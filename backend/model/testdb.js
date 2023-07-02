@@ -12,9 +12,15 @@ async function testUser()
     testdata=await User.getUserById(1);
     console.log(testdata);
 }
-async function testBook()
+async function testgetAllBook()
 {
-    testdata=await Book.getAllBookName
+    testdata=await Book.getAllBook()
     console.log(testdata);
 }
-testUser();
+
+async function testgetAllBookName(){
+    testdata=await Book.getAllBookName()
+    console.log(testdata);
+}
+
+testgetAllBookName()

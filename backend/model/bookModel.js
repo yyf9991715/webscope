@@ -46,7 +46,7 @@ async function getAllBook(){
 }
 
 async function getAllBookName(){
-    let result=await bookModel.find({}).select("title").exec();
+    let result=await bookModel.find({}).select("title author").exec();
     return result;
 }
 
@@ -68,4 +68,11 @@ async function getBookRating(id){
 }
 
 // Export model
-module.exports = {bookModel,getAllBook,getAllBookName};
+module.exports = {
+    bookModel,
+    getAllBook,
+    getAllBookName,
+    getBookByKey,
+    getBookDetail,
+    getBookRating,
+};
