@@ -3,7 +3,7 @@ const mongoose = require("./mongodb.js");
 // Initialize parameters
 const collectionName = process.env.DB_COLLECTION;
 
-const ratingSchema =new mongoose.Schema({
+const ReviewSchema =new mongoose.Schema({
     userid:Number,
     type:String,
     itemid:String,
@@ -11,4 +11,10 @@ const ratingSchema =new mongoose.Schema({
     rating:Number,
 }
 )
+//init the model
+let bookModel = mongoose.model("Review", schema=ReviewSchema);
 
+async function create_review(userid,itemtype,itemid,review,rating){
+    
+
+}

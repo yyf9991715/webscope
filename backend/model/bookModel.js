@@ -7,6 +7,7 @@ const collectionName = process.env.DB_COLLECTION;
 // Create mongoose schema
 const bookSchema = new mongoose.Schema({
     _id:{ type: mongoose.ObjectId, required: true },
+    id:Number,
     title:String,
     price:mongoose.Decimal128,
     n_reviews:Number,
@@ -15,28 +16,17 @@ const bookSchema = new mongoose.Schema({
     },
     publisher:String,
     pages:Number,
-
     dimensions:String,
     author:String,
-    star5:{
-        type: mongoose.Decimal128,
-    },
-    star4:{
-        type: mongoose.Decimal128,
-    },
-    star3:{
-        type: mongoose.Decimal128,
-    },
-    star2:{
-        type: mongoose.Decimal128,
-    },
-    star1:{
-        type: mongoose.Decimal128,
-    },
     ISBN_13:String,
     link:String,
     language:String,
-
+    NS1:Number,
+    NS2:Number,
+    NS3:Number,
+    NS4:Number,
+    NS5:Number,
+    SUM:Number,
 });
   
 // Create model from schema
@@ -47,7 +37,7 @@ async function getAllBook(){
 }
 
 async function getAllBookName(){
-    let result=await bookModel.find({}).select("title author avg_reviews").exec();
+    let result=await bookModel.find({}).select("id title author avg_reviews").exec();
 
     //console.log(result.slice(0,10));
     return result;
@@ -66,6 +56,8 @@ async function getBookDetail(id){
     return result;
 }
  
+async function getNewAvg_rating(book){
+}
 
 async function getBookRating(id){
     const book= await getBookDetail(id);
@@ -85,3 +77,4 @@ module.exports = {
     getBookDetail,
     getBookRating,
 };
+
