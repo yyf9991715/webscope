@@ -1,34 +1,49 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './Chatgpt.css';
 
-const ChatGPT = () => {
+const ChatGpt = () => {
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState('');
 
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value);
-  };
+  const sendMessage = async () => {
+    if (inputValue.trim() === '') return;
 
-  const handleSendMessage = () => {
-    if (inputValue.trim() !== '') {
-      const newMessage = {
-        id: messages.length + 1,
-        content: inputValue,
-      };
-      setMessages([...messages, newMessage]);
-      setInputValue('');
+    // Add user message to the chat
+    setMessages((prevMessages) => [
+      ...prevMessages,
+      { role: 'user', content: inputValue },
+    ]);
+
+    // Clear input field
+    setInputValue('');
+
+    try {
+      // Send user message to the server
+      const response = await axios.post('http://localhost:4000/chat', { message: inputValue });
+
+      // Add ChatGPT's response to the chat
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        { role: 'chatbot', content: response.data.response },
+      ]);
+    } catch (error) {
+      console.error('Error sending message:', error);
     }
   };
 
   return (
-    <div className="chat-container">
+    <div className="chat-container" id="chat-container">
       <div className="chat-header">
-        <h2>ChatGPT Chatroom</h2>
-        <p>Welcome to the ChatGPT Chatroom! Feel free to ask any questions.</p>
+        <h2>Chat with ChatGPT</h2>
+        <p>Type a message and press Enter to send</p>
       </div>
       <div className="chat-messages">
-        {messages.map((message) => (
-          <div className="message" key={message.id}>
+        {messages.map((message, index) => (
+          <div
+            key={index}
+            className={`message ${message.role === 'user' ? 'user-message' : 'chatbot-message'}`}
+          >
             {message.content}
           </div>
         ))}
@@ -38,12 +53,19 @@ const ChatGPT = () => {
           type="text"
           placeholder="Type your message..."
           value={inputValue}
-          onChange={handleInputChange}
+          onChange={(e) => setInputValue(e.target.value)}
+          onKeyPress={(e) => {
+            if (e.key === 'Enter') {
+              sendMessage();
+            }
+          }}
         />
-        <button onClick={handleSendMessage}>Send</button>
+        <button onClick={sendMessage}>Send</button>
       </div>
     </div>
   );
 };
 
-export default ChatGPT;
+export default ChatGpt;
+
+
