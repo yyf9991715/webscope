@@ -1,3 +1,6 @@
+const express = require('express');
+const router = express.Router();
+
 router.post('/', async (req, res) => {
   try {
     const { message } = req.body;
@@ -49,3 +52,4 @@ router.post('/', async (req, res) => {
   }
 });
 
+module.exports = router;
