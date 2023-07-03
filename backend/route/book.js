@@ -23,8 +23,8 @@ router.get("/detail/:bookid",async function(req,res){
 
 router.post("/querykey",async function(req,res){
     
-    console.log(req.data.keyword);
-    let keyword=req.data.keyword;
+    console.log(req.body.keyword);
+    let keyword=req.body.keyword;
     let booklist= await dbBook.getBookByKey(keyword);
     res.json(booklist);
 });
