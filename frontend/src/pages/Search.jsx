@@ -44,7 +44,7 @@ useEffect(()=>{
                 title={value.title}
                 author={value.author?value.author:"unknown"}
                 rating={value.avg_reviews}
-                linkto={"/resource/"+value._id}
+                linkto={"/resource/"+value.id}
                 
               />
          
