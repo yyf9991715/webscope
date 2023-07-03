@@ -41,12 +41,12 @@ async function testcreate_review(){
     console.log(testdata);
 }
 async function testgetReviewbyItemID(){
-    testdata=await Review.getReviewbyItemID(1);
+    testdata=await Review.getReviewbyItemID(2);
     console.log(testdata);
 }
 async function testgetReviewbyUserID(){
-    testdata=await Book.getUserById("Python");
+    testdata=await Review.getReviewbyUserID(1);
     console.log(testdata);
 }
-
-testcreate_review();
+// testgetReviewbyItemID();
+testgetReviewbyUserID();

@@ -15,8 +15,15 @@ const ReviewSchema =new mongoose.Schema({
 let reviewModel = mongoose.model("Review", schema=ReviewSchema);
 
 async function create_review(uid,itemtype,iid,ureview,urating){
-    const newreview= reviewModel.create({userid:uid,type:itemtype,itemid:iid,review:ureview,rating:urating});
+    if(nreview&&nreview!==""){
+        const newreview= reviewModel.create({userid:uid,type:itemtype,itemid:iid,review:ureview,rating:urating});
+    }
+    else{ 
+        const newreview=null;
+    }
+    
     return newreview;
+
 }
 async function getReviewbyUserID(uid){
 
@@ -31,7 +38,7 @@ async function getReviewbyItemID(iid){
 module.exports = {
     create_review,
     getReviewbyItemID,
-    getReviewbyItemID,
+    getReviewbyUserID,
     reviewModel,
 };
 
