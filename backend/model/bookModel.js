@@ -45,14 +45,14 @@ async function getAllBookName(){
 
 
 async function getBookByKey(key){
-    let result= await bookModel.find({title:{$regex:key }});
+    let result= await bookModel.find({title:{$regex:key }}).exec();
     return result;
 }
 
-async function getBookDetail(id){
+async function getBookDetail(nid){
     // let qid=new ObjectId(id);
-    console.log(id);
-    let result = await bookModel.findById(id);
+    console.log(nid);
+    let result = await bookModel.findOne({id:nid});
     return result;
 }
  

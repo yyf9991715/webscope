@@ -1,6 +1,6 @@
 const Book = require("./bookModel.js");
 const User = require("./userModel.js");
-
+const Review = require("./reviewModel.js");
 async function main(){
     testdata=await Book.getAllBookName();
     for(let i=0;i<20;i++){
@@ -32,8 +32,21 @@ async function testgetBookByKey(){
     console.log(testdata);
 }
 async function testgetBookDetail(){
-    testdata=await Book.getBookDetail("64907428760997866ad6a048")
+    testdata=await Book.getBookDetail("1")
     console.log(testdata);
 }
 
-testgetAllBookName()
+async function testcreate_review(){
+    testdata=await Review.create_review(2,"books",2,"A very good book",5);
+    console.log(testdata);
+}
+async function testgetReviewbyItemID(){
+    testdata=await Review.getReviewbyItemID(1);
+    console.log(testdata);
+}
+async function testgetReviewbyUserID(){
+    testdata=await Book.getUserById("Python");
+    console.log(testdata);
+}
+
+testcreate_review();
