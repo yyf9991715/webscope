@@ -40,19 +40,21 @@
 .message {
   margin-bottom: 0.5rem;
   padding: 0.5rem;
-  border-radius: 4px;
+  border-radius: 15px;
   display: flex;
+  font-size: 16px;
 }
 
 .message.user {
-  background-color: red;
+  border: 2px solid #77b977;
   align-self: flex-end;
-  color: #fff;
+  background-color: #f0f0f0;
 }
 
 .message.assistant {
-  background-color: yellow;
+  border: 2px solid #77a9b9;
   align-self: flex-start;
+  background-color: #f0f0f0;
 }
 
 .chat-input {
