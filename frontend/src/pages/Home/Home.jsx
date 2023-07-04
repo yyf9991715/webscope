@@ -1,13 +1,13 @@
 import  "./Home.css"
 import { Grid,Paper} from '@mui/material';
-import bac from "../../assets/image-3.jpg"
-import img from "../../assets/elearninghelper.png"
-import Footer2 from "../../components/Footer/Footer2"
-import searchimg from "../../assets/search.jpg"
-import resourceimg from "../../assets/resource.jpg"
-import ratingimg from "../../assets/rating.jpg"
+import bac from "../assets/image-3.jpg"
+import img from "../assets/elearninghelper.png"
+import Footer2 from "../components/Footer2"
+import searchimg from "../assets/search.jpg"
+import resourceimg from "../assets/resource.jpg"
+import ratingimg from "../assets/rating.jpg"
 import { Link } from "react-router-dom"
-import ai from "../../assets/ai.jpg"
+import ai from "../assets/ai.jpg"
 const style={
     theme:{
         height:"100vh"
@@ -18,15 +18,12 @@ export default function Home (){
     return (
         <>
         <div className="sub-home1"style={style.theme}>
-            <div className="home-bac">
-                <img src={bac} alt="bac" />
-            </div>
             <div className="home-intro">
                 <h1 className="title">
                     eLearningHelper
                 </h1>
                 <h1 >
-                    Wlecome to the worlds's lastest resource for learning!
+                    Welcome to the worlds's lastest resource for learning!
                 </h1>
             </div>
             
@@ -43,7 +40,7 @@ export default function Home (){
             <div className="middle">
                 
                     <img src={resourceimg} alt="p2" />
-                    <p>Find the resource</p>
+                    <p>Find the best resource for you</p>
                
             </div>
 
@@ -57,26 +54,17 @@ export default function Home (){
        </div>
        <div className="sub-home4">
             <Link to="/chatgpt">
-                <div className="img">
-                    <img src={ai} alt="ai1img" />
-                </div>
                 <div className="home-intro">
-                    <h1 className="title">
-                        Learn What You Want
+                    <h1>
+                        Implementing ChatGPT<br />To solve all your questions
                     </h1>
-                    <h1 >
-                        Communication with chatgpt
-                    </h1>
+                </div>
+                <div className="logo">
+                    <img src={ai} alt="p4" />
                 </div>
             </Link>
        </div>
        <div className="sub-home3">
-            <div className="left">
-            <div className="home-bac">
-                <img src={img} alt="end" />
-            </div>
-            </div>
-
             <div className="right">
                 <div>
                     <br />
@@ -101,10 +89,6 @@ export default function Home (){
           
             
        </div>
-
-       
-       
-       <Footer2/>
         </>
     );
 }
