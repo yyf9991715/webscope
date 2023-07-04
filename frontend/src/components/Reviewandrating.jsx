@@ -24,6 +24,8 @@ const Reviewandrating = ({nitemid,nuserid}) => {
   const handleCancel = () => {
     // Handle cancel logic here
     console.log('Cancel');
+    document.getElementById("review-text").value = "";
+    
   };
 
   const handleSendReview = () => {
@@ -73,6 +75,7 @@ const Reviewandrating = ({nitemid,nuserid}) => {
       <div className="review-input">
         <p>Write your review:</p>
         <textarea
+          id='review-text'
           type="text"
           placeholder="Write your review..."
           onChange={e=>setData({...data,review:e.target.value})}
