@@ -21,8 +21,8 @@ async function main(){
 
 async function test(){
     let param= new URLSearchParams();
-    param.append("userid",2);
-    param.append("itemid",3);
+    param.append("userid",3);
+    param.append("itemid",20);
     param.append("review","");
     param.append("rating",1)
 

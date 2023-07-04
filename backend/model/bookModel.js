@@ -59,7 +59,8 @@ async function getBookDetail(nid){
 async function getNewAvg_rating(book){
 }
 
-function calc_new_SUM(book){
+async function calc_new_SUM(book){
+    console.log(`NS1:${book.NS1},NS2:${book.NS2},NS3:${book.NS3},NS4:${book.NS4},NS5:${book.NS5},`)
     let TSUM=book.NS1+book.NS2+book.NS3+book.NS4+book.NS5;
     let TSCO=book.NS1*1+book.NS2*2+book.NS3*3+book.NS4*4+book.NS5*5;
     book.SUM=TSUM;
@@ -77,36 +78,53 @@ async function addNewRating(iid,rating){
     let book= await getBookDetail(iid);
     let NNS=0;
     if(book){
-        console.log(book)
+        //console.log(book)
+        console.log("rating:",rating);
         switch(rating){
             case 1:
+            case "1":
                 book.NS1=book.NS1+1;
-                console.log(book);
+                console.log(book.NS1);
+                book.save();
                 break;
             case 2:
+
+            case "2":
                 book.NS2=book.NS2+1;
-                console.log(book);
+                console.log(book.NS2);
+                book.save();
                 break;
 
             case 3:
+
+            case "3":
                 book.NS3=book.NS3+1;
-                console.log(book);
+                console.log(book.NS3);
+                book.save();
                 break;
 
             case 4:
+
+            case "4":
                 book.NS4=book.NS4+1;
-                console.log(book);
+                console.log(book.NS4);
+                book.save();
                 break;
 
             case 5:
+
+
+            case "5":
                 book.NS5=book.NS5+1;
-                console.log(book);
+                console.log(book.NS5);
+                book.save();
                 break;
         }
+        book=await getBookDetail(iid);
         book=await calc_new_SUM(book);
-        book.save();
-        book=await getBookDetail(iid)
         console.log(book)
+
+        book.save();
     }
     return book;
 }

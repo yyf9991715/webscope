@@ -17,8 +17,9 @@ const ReviewSchema =new mongoose.Schema({
 let reviewModel = mongoose.model("Review", schema=ReviewSchema);
 
 async function create_review(uid,itemtype,iid,ureview,urating){
-    let newreview=null
-    Book.addNewRating(iid,urating)
+    let newreview=null;
+    let book = await Book.addNewRating(iid,urating);
+    console.log(book);
     if(ureview&&ureview!==""){
         console.log(uid,itemtype,iid,ureview,urating);
         const u=await getUserById(uid);
