@@ -1,9 +1,9 @@
 import React,{useEffect,useState} from 'react';
 import { Link } from 'react-router-dom';
 import './Search.css';
-import "../components/Searchbar"
-import Searchbar from '../components/Searchbar';
-import Resourcecard from '../components/Resourcecard';
+import "../../components/Searchbar"
+import Searchbar from '../../components/Searchbar';
+import Resourcecard from '../../components/Resourcecard';
 import axios from 'axios';
 
 const Search = () => {

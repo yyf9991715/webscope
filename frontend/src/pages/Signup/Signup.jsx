@@ -1,6 +1,6 @@
 import axios from 'axios';
 import "./Signup.css"
-import Footer2 from '../components/Footer2';
+import Footer2 from '../../components/Footer/Footer2';
 import { Link } from "react-router-dom";
 import { useState} from "react";
 

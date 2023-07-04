@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Footer2.css"
-import img from "../assets/image-2.jpg"
+import img from "../../assets/image-2.jpg"
 
 function Footer2() {
   return (

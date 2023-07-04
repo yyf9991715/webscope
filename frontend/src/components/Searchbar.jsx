@@ -12,51 +12,21 @@ function Searchbar() {
   const [keyword,setKeyword]=useState({
     keyword:""
   });
-  let result=[];
-   async function getResultAndSet(){
 
-     result = await axios.post("http://localhost:4000/book/querykey",keyword);
-     result = result.data;
-     await setResults(result);
-     console.log(result);
-
-    return result;
-  };
   const handleSubmit= async (event)=>{
-      // .then(res=>{
-      //   console.log(res.data);
-      //   this.setResults(res.data);
-      //   console.log(results);
-      // })
+      
       event.preventDefault();
-
-        await getResultAndSet();
-      navigate("/searched");
+      axios.post("http://localhost:4000/book/querykey",keyword)
+        .then(res=>{
+          setResults(res.data);
+          console.log("results",results);
+        })
       
   };
 
-
-  if(results===[]){return (
-    <>
-    <form >
-     <div className='input-wrapper'>
-      
-          <input 
-          placeholder="Type to search..."
-          onChange={e=>setKeyword({keyword:e.target.value})}/>
-          <FaSearch id="search-icon"
-          onClick={handleSubmit}
-          style={{ cursor:"pointer" }}
-          />  
-    </div>
-    </form>
-    </>
-   
-  );}
-  else {
     return (
       <>
-      <form >
+  
        <div className='input-wrapper'>
         
             <input 
@@ -67,13 +37,17 @@ function Searchbar() {
             style={{ cursor:"pointer" }}
             />  
       </div>
-      </form>
+      <div className="output-wrapper">
+      {results.map((value)=>(
+         <p>{value.title}</p>
+      ))}
+      </div>
+
 
       
       
       </>
     )
   }
-}
 
 export default Searchbar

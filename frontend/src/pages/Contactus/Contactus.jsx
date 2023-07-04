@@ -1,10 +1,10 @@
-import webscopeimg from "../assets/webscope.png"
-import img from "../assets/elearninghelper.png"
+import webscopeimg from "../../assets/webscope.png"
+import img from "../../assets/elearninghelper.png"
 import { Grid,Paper,Typography} from '@mui/material';
 import "./Contactus.css"
-import Singlebanner from "../components/Singlebanner"
-import imgbac from "../assets/image-7.jpg"
-import Footer2 from "../components/Footer2";
+import Singlebanner from "../../components/Singlebanner"
+import imgbac from "../../assets/image-7.jpg"
+import Footer2 from "../../components/Footer/Footer2";
 
 const style={
     theme:{

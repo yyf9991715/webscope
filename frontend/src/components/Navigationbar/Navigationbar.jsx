@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/e114b11cc9214759b53d1ea0a37a4ca1.png";
+import logo from "../../assets/e114b11cc9214759b53d1ea0a37a4ca1.png";
 import "./Navigationbar.css";
 
 const Navigationbar = ({ isLoggedIn, onLogin, onLogout }) => {

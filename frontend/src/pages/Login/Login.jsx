@@ -1,6 +1,6 @@
 import "./Login.css"
 import { Link, redirect,useNavigate } from "react-router-dom";
-import Footer2 from "../components/Footer2";
+import Footer2 from "../../components/Footer/Footer2";
 import axios from 'axios';
 import cookies from "js-cookie";
 import { useState} from "react";

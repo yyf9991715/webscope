@@ -1,9 +1,9 @@
 import { Grid,Paper} from '@mui/material';
-import webscopeimg from "../assets/webscope.png"
+import webscopeimg from "../../assets/webscope.png"
 import "./Privacy.css"
-import Singlebanner from "../components/Singlebanner"
-import imgbac from "../assets/image-6.jpg"
-import Footer2 from '../components/Footer2';
+import Singlebanner from "../../components/Singlebanner"
+import imgbac from "../../assets/image-6.jpg"
+import Footer2 from '../../components/Footer/Footer2';
 const style={
     theme:{
         height:"75vh"

@@ -1,10 +1,10 @@
 import React, { useEffect,useState } from 'react';
 import { Link } from 'react-router-dom';
 import './resource.css';
-import Reviewandrating from '../components/Reviewandrating';
+import Reviewandrating from '../../components/Rating&Review/Reviewandrating';
 import {useParams} from "react-router-dom"
 import axios from 'axios';
-import Starrating from '../components/Starrating';
+import Starrating from '../../components/Rating&Review/Starrating';
 import {useNavigate } from "react-router-dom";
 
 const Resource = (props) => {

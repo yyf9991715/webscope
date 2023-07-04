@@ -1,13 +1,13 @@
 import {useParams} from "react-router-dom"
-import Singlebanner from "../components/Singlebanner"
-import Usersidebar from "../components/UserProfil/Usersidebar";
-import Accountsetting from "../components/UserProfil/Accountsetting";
+import Singlebanner from "../../components/Singlebanner"
+import Usersidebar from "../../components/UserProfil/Usersidebar";
+import Accountsetting from "../../components/UserProfil/Accountsetting";
 import "./Userprofilsetting.css"
-import Mylibrary from "../components/UserProfil/Mylibrary";
-import Myreviewandrating from "../components/UserProfil/Myreviewandrating"
-import Changepassword from "../components/UserProfil/Changepassword"
-import imgbac from "../assets/image-4.jpg"
-import Footer2 from "../components/Footer2";
+import Mylibrary from "../../components/UserProfil/Mylibrary";
+import Myreviewandrating from "../../components/UserProfil/Myreviewandrating"
+import Changepassword from "../../components/UserProfil/Changepassword"
+import imgbac from "../../assets/image-4.jpg"
+import Footer2 from "../../components/Footer/Footer2";
 const person = {
     name: 'User',
     theme: {

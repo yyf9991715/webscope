@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Resourcecard.css"
 import {Link} from 'react-router-dom';
-import Starrating from './Starrating';
+import Starrating from './Rating&Review/Starrating';
 const style={
     theme:{
         height:"75vh"

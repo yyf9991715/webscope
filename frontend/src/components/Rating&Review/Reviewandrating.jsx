@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Reviewandrating.css';
-import Starrating from '../components/Starrating';
+import Starrating from './Starrating';
 import axios from 'axios';
 import {useNavigate } from "react-router-dom";
 
