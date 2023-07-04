@@ -8,7 +8,7 @@ router.post("/newreview", async function(req,res){
     console.log(data);
     if(data.userid&&data.itemid){
         let new_review = await dbReview.create_review(data.userid,"books", data.itemid,data.review,data.rating);
-        if(new_review)res.json({Status:"success",review:new_review});
+        if(new_review!==null)res.json({Status:"success",review:new_review});
         else res.json({Status:"failed to create new rating"})
 
     }

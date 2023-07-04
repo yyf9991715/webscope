@@ -1,14 +1,19 @@
 import React, { useEffect,useState } from 'react';
+import { Link } from 'react-router-dom';
 import './resource.css';
 import Reviewandrating from '../components/Reviewandrating';
 import {useParams} from "react-router-dom"
 import axios from 'axios';
+import Starrating from '../components/Starrating';
+
 
 const Resource = (props) => {
   const {id} = useParams();
   const bookid=id;
   const [values,setValues]=useState({});
   console.log(bookid);
+
+
   
   useEffect(()=>{
       axios.get('http://localhost:4000/book/detail/'+bookid)
@@ -41,23 +46,27 @@ const Resource = (props) => {
   return (
     <div>
       <div className="resource-container">
-        <div className="resource-image">
+        <div className="left">
           <img src={resourceData.image} alt="Resource" />
         </div>
-        <div className="resource-details">
+        <div className="middle">
           <h2> {values.title}</h2>
+          <br />
           <p>Price:{values.price}</p>
           <p>Pages:{values.pages?values.pages:"null"}</p>
           <p>Number of reviews:{values.n_reviews}</p>
           <p>Language:{values.language?values.language:"null"}</p>
-          <p>Complete Link:{values.complete_link?values.complete_link:"null"}</p>
-          <div className="average-rating">
-            Average Rating: {values.avg_reviews}
-          </div>
+          <a href={values.complete_link}>Go To Amazon Link</a>
         </div>
+        <div className="right">
+          <p> Average Rating:{values.avg_reviews}</p>
+           <Starrating
+           nrating={values.avg_reviews}
+           />
+          </div>
       </div>
       <div className="content-container">
-        <div className="ratings">
+        <div className="left">
           {resourceData.ratings.map((rating) => (
             <div className="rating-item">
               <div className="user-details">
@@ -71,15 +80,21 @@ const Resource = (props) => {
               </div>
             </div>
           ))}
-          <div>
-            <Reviewandrating/>
-          </div>
+          
         </div>
-        <div className="opinion-container">
-          <div className="opinion-title">ChatGPT's Opinion</div>
-          <div className="opinion-text">{resourceData.opinion}</div>
+        <div className='right'>
+            <Reviewandrating
+            nitemid={bookid}
+            nuserid={localStorage.getItem("userid")}
+            />
         </div>
       </div>
+
+      <div className="opinion-container">
+          <div className="opinion-title">ChatGPT's Opinion</div>
+          <div className="opinion-text">{resourceData.opinion}</div>
+      </div>
+      
     </div>
   );
 };

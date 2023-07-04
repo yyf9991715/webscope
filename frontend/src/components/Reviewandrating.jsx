@@ -1,18 +1,23 @@
 import React, { useState } from 'react';
 import './Reviewandrating.css';
 import Starrating from '../components/Starrating';
+import axios from 'axios';
 
-const Reviewandrating = () => {
+const Reviewandrating = ({nitemid,nuserid}) => {
   const [rating, setRating] = useState(0);
   const [review, setReview] = useState('');
 
+  const [data,setData]=useState({
+    userid:nuserid,
+    itemid:nitemid,
+    review:"",
+    rating:5
+  })
+  console.log(data);
   const handleRatingChange = (newRating) => {
-    setRating(newRating);
+    setData({...data,rating:newRating});
   };
 
-  const handleReviewChange = (event) => {
-    setReview(event.target.value);
-  };
 
   const handleCancel = () => {
     // Handle cancel logic here
@@ -21,23 +26,50 @@ const Reviewandrating = () => {
 
   const handleSendReview = () => {
     // Handle send review logic here
-    console.log('Send Review');
+    console.log(data);
+    if(data.userid){
+    axios.post("http://localhost:4000/review/newreview",data)
+      .then(res=>{
+          console.log(res.data.Status);
+          if(res.data.Status==="success") alert("success updated!");
+          else{
+            alert("please write something!")
+          }
+      })
+    } else{
+      alert("not login");
+    }
   };
 
   return (
     <div className="review-container">
       <div className="review-header">
-        <h2>Write a Review</h2>
-        <p>Rate and review the product</p>
+        <br />
+        
+        <h2>Rate and review the product</h2>
+        
       </div>
       <div className="rating-container">
-        <Starrating rating={rating} onChange={handleRatingChange} />
+          <label>
+          <p>For user:{localStorage.getItem("userName")?localStorage.getItem("userName"):"not login!"}</p>
+          Choose your rating:
+          <br />
+          <select name="selectedFruit"
+          onChange={e=>setData({...data,rating:e.target.value})} >
+            <option value={1}>1:you didn’t enjoy it at all and would not recommend it to others.</option>
+            <option value={2}>2:you didn’t enjoy it but might recommend it to others.</option>
+            <option value={3}>3:you enjoyed it, but it wasn’t your favorite.</option>
+            <option value={4}>4:you really enjoyed it and would recommend it to others.</option>
+            <option value={5}>5:you loved it and would definitely recommend it to others.</option>
+          </select>
+        </label>
       </div>
       <div className="review-input">
+        <p>Write your review:</p>
         <textarea
+          type="text"
           placeholder="Write your review..."
-          value={review}
-          onChange={handleReviewChange}
+          onChange={e=>setData({...data,review:e.target.value})}
         ></textarea>
       </div>
       <div className="button-container">

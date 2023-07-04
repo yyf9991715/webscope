@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Resourcecard.css"
 import {Link} from 'react-router-dom';
+import Starrating from './Starrating';
 const style={
     theme:{
         height:"75vh"
@@ -22,6 +23,8 @@ function Resourcecard({title,author,rating,linkto}) {
                 </div>
                 <div className="resource-rating2">
                   Rating: {rating}
+                  <Starrating
+                  nrating={rating}/>
                 </div>
               
               <div className='resource-link'>
