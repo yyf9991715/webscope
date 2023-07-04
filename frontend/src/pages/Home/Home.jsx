@@ -1,13 +1,13 @@
 import  "./Home.css"
 import { Grid,Paper} from '@mui/material';
-import bac from "../assets/image-3.jpg"
-import img from "../assets/elearninghelper.png"
-import Footer2 from "../components/Footer2"
-import searchimg from "../assets/search.jpg"
-import resourceimg from "../assets/resource.jpg"
-import ratingimg from "../assets/rating.jpg"
+import bac from "../../assets/image-3.jpg"
+import img from "../../assets/elearninghelper.png"
+import Footer2 from "../../components/Footer/Footer2"
+import searchimg from "../../assets/search.jpg"
+import resourceimg from "../../assets/resource.jpg"
+import ratingimg from "../../assets/rating.jpg"
 import { Link } from "react-router-dom"
-import ai from "../assets/ai.jpg"
+import ai from "../../assets/ai.jpg"
 const style={
     theme:{
         height:"100vh"
