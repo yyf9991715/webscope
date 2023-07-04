@@ -68,7 +68,7 @@ function calc_new_SUM(book){
     avg=avg.toFixed(1);
     avg=avg.toString();
     console.log(avg);
-    book.avg_reviews=new mongoose.Decimal128(avg);
+    book.avg_reviews=new mongoose.Types.Decimal128(avg);
     console.log(book.avg_reviews);
     // console.log(book);
     return book;

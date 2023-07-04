@@ -23,8 +23,8 @@ async function test(){
     let param= new URLSearchParams();
     param.append("userid",2);
     param.append("itemid",3);
-    param.append("review","It's a fantasy book");
-    param.append("rating",5)
+    param.append("review","");
+    param.append("rating",1)
 
     await axios.post(
         "http://localhost:4000/review/newreview",
