@@ -1,0 +1,27 @@
+.myreview{
+    display: flex;
+    justify-content: center;
+    gap:5px;
+    width: 100%;
+    margin-bottom: 1rem;
+
+}
+.myreview-review{
+    width:55%;
+    background-color: #aed9f9;
+    border-radius: 4px;
+    min-height: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.myreview-book{
+    width:35%;
+    background-color: #aed9f9;
+    border-radius: 4px;
+    min-height: 20px;
+}
+.myreview-rating{
+    color: #ff9800;
+    font-size: 18px;
+    margin-top: 0.5rem;
+    font-family: 'Times New Roman', Times, serif;
+}
