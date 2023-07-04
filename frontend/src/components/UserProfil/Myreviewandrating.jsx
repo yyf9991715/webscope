@@ -39,10 +39,10 @@ const Myreviewandrating = () => {
                </div>
                <div className='myreview-book'>
                     <p>Bookid:{value.itemid}</p>
-                    <Link to={"/resource/"+value.itemid}
+                    <a href={"/resource/"+value.itemid}
                     style={style.linktext}>
                         see book
-                    </Link>
+                    </a>
 
                </div>
              </div>

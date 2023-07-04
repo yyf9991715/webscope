@@ -6,6 +6,7 @@ import {useParams} from "react-router-dom"
 import axios from 'axios';
 import Starrating from '../../components/Rating&Review/Starrating';
 import {useNavigate } from "react-router-dom";
+import {MdFavorite} from "react-icons/md"
 
 const Resource = (props) => {
   const navigate=useNavigate()
@@ -14,7 +15,7 @@ const Resource = (props) => {
   const [values,setValues]=useState({});
   console.log(bookid);
   const [ratings,setRatings]=useState([{}]);
-
+  const[add,setAdd]=useState(false);
 
   
   useEffect(()=>{
@@ -31,9 +32,12 @@ const Resource = (props) => {
             console.log("ratings",res.data);
           })
   },[]);
-  const resourceData = {
-    opinion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae lacus id justo interdum laoreet ut sed purus. Etiam ac consequat odio. Aliquam quis lectus ut arcu viverra gravida at non arcu. In gravida ex a enim maximus, at laoreet nisi lobortis. Proin non tellus volutpat, convallis orci vitae, pharetra nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc posuere auctor mi, vitae euismod nisl ullamcorper eu. Sed lobortis laoreet sollicitudin. Vestibulum pretium elit at lectus aliquam, vitae cursus quam ullamcorper. Sed aliquet felis vel vulputate efficitur. Fusce in lacus ac orci auctor bibendum. Cras bibendum tempor neque, eget varius ligula dictum at.",
-  };
+  const handleOnclick=()=>{
+    if(add){
+      setAdd(false);
+    }else
+    setAdd(true);
+  }
 
   const renderStarRating = (rating) => {
     // Rating rendering logic here
@@ -55,15 +59,23 @@ const Resource = (props) => {
           <a href={values.complete_link}>Go To Amazon Link</a>
         </div>
         <div className="right">
-          <p> Average Rating:{values.avg_reviews}</p>
+          <br />
+          <br />
+          <br />
            <Starrating
            nrating={values.avg_reviews}
-           
            />
-           <script>
-          
-           </script>
-          
+           <p> Average Rating:{values.avg_reviews}</p>
+           <br />
+           
+           <br />
+          <MdFavorite
+          className='heart'
+          size={40}
+          onClick={handleOnclick}
+          color={add?"red":"#e4e5e9"}
+          />
+          <p>add to my library</p>
           </div>
       </div>
       <div className="content-container">
@@ -94,10 +106,7 @@ const Resource = (props) => {
         </div>
       </div>
 
-      <div className="opinion-container">
-          <div className="opinion-title">ChatGPT's Opinion</div>
-          <div className="opinion-text">{resourceData.opinion}</div>
-      </div>
+      
       
     </div>
   );
