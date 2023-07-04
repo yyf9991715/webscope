@@ -37,7 +37,7 @@ async function testgetBookDetail(){
 }
 
 async function testcreate_review(){
-    testdata=await Review.create_review(2,"books",2,"A very good book",5);
+    testdata=await Review.create_review(2,"books",2,"",5);
     console.log(testdata);
 }
 async function testgetReviewbyItemID(){
@@ -49,4 +49,12 @@ async function testgetReviewbyUserID(){
     console.log(testdata);
 }
 // testgetReviewbyItemID();
-testgetReviewbyUserID();
+//testgetReviewbyUserID();
+testcreate_review()
+
+async function testaddNewRating(){
+    testdata=await Book.addNewRating(1,3);
+    console.log(testdata);
+}
+
+// testaddNewRating();

@@ -31,6 +31,7 @@ async function create_review(uid,itemtype,iid,ureview,urating){
             rating:urating
         });
     }
+    Book.addNewRating(iid,urating)
     console.log(newreview);
     return newreview;
 }
