@@ -6,7 +6,7 @@ const collectionName = process.env.DB_COLLECTION;
 const ReviewSchema =new mongoose.Schema({
     userid:Number,
     type:String,
-    itemid:String,
+    itemid:Number,
     review:String,
     rating:Number,
 }
@@ -19,11 +19,9 @@ async function create_review(uid,itemtype,iid,ureview,urating){
     if(ureview&&ureview!==""){
         console.log(uid,itemtype,iid,ureview,urating);
         newreview= await reviewModel.create({userid:uid,type:itemtype,itemid:iid,review:ureview,rating:urating});
-
     }
     
-
-
+    return newreview;
 }
 async function getReviewbyUserID(uid){
 
