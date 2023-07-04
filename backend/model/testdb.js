@@ -50,11 +50,18 @@ async function testgetReviewbyUserID(){
 }
 // testgetReviewbyItemID();
 //testgetReviewbyUserID();
-testcreate_review()
+// testcreate_review()
 
 async function testaddNewRating(){
     testdata=await Book.addNewRating(1,3);
     console.log(testdata);
 }
 
+async function testcalc_new_SUM(){
+    testdata=await Book.getBookDetail(20);
+    testdata=await Book.calc_new_SUM(testdata);
+    console.log(testdata);
+}
+
+testcalc_new_SUM()
 // testaddNewRating();

@@ -64,9 +64,13 @@ function calc_new_SUM(book){
     let TSCO=book.NS1*1+book.NS2*2+book.NS3*3+book.NS4*4+book.NS5*5;
     book.SUM=TSUM;
     book.n_reviews=TSUM;
-
+    let avg=TSCO*1.0/TSUM;
+    avg=avg.toFixed(1);
+    avg=avg.toString();
+    console.log(avg);
+    book.avg_reviews=new mongoose.Decimal128(avg);
     console.log(book.avg_reviews);
-    console.log(book);
+    // console.log(book);
     return book;
 }
 async function addNewRating(iid,rating){
@@ -125,5 +129,6 @@ module.exports = {
     getBookDetail,
     getBookRating,
     addNewRating,
+    calc_new_SUM,
 };
 
