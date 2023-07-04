@@ -59,28 +59,52 @@ async function getBookDetail(nid){
 async function getNewAvg_rating(book){
 }
 
+function calc_new_SUM(book){
+    let TSUM=book.NS1+book.NS2+book.NS3+book.NS4+book.NS5;
+    let TSCO=book.NS1*1+book.NS2*2+book.NS3*3+book.NS4*4+book.NS5*5;
+    book.SUM=TSUM;
+    book.n_reviews=TSUM;
+
+    console.log(book.avg_reviews);
+    console.log(book);
+    return book;
+}
 async function addNewRating(iid,rating){
-    const book= await getBookDetail(iid);
+    let book= await getBookDetail(iid);
+    let NNS=0;
     if(book){
         console.log(book)
         switch(rating){
             case 1:
                 book.NS1=book.NS1+1;
+                console.log(book);
                 break;
             case 2:
+                book.NS2=book.NS2+1;
+                console.log(book);
                 break;
 
             case 3:
+                book.NS3=book.NS3+1;
+                console.log(book);
                 break;
 
             case 4:
+                book.NS4=book.NS4+1;
+                console.log(book);
                 break;
 
             case 5:
+                book.NS5=book.NS5+1;
+                console.log(book);
                 break;
         }
+        book=await calc_new_SUM(book);
+        book.save();
+        book=await getBookDetail(iid)
+        console.log(book)
     }
-
+    return book;
 }
 
 async function getBookRating(id){
@@ -100,5 +124,6 @@ module.exports = {
     getBookByKey,
     getBookDetail,
     getBookRating,
+    addNewRating,
 };
 
