@@ -6,7 +6,7 @@ import axios from 'axios';
 import {useNavigate } from "react-router-dom";
 
 const Accountsetting = () => {
-  const navigate=useNavigate()
+  const navigate=useNavigate();
   var nuserid=localStorage.getItem("userid");
   var username=localStorage.getItem("userName");
   var useremail = localStorage.getItem("userEmail");
