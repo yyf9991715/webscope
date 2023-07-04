@@ -1,5 +1,5 @@
 const mongoose = require("./mongodb.js");
-
+const Book=require("./bookModel.js")
 // Initialize parameters
 const collectionName = process.env.DB_COLLECTION;
 
@@ -15,14 +15,14 @@ const ReviewSchema =new mongoose.Schema({
 let reviewModel = mongoose.model("Review", schema=ReviewSchema);
 
 async function create_review(uid,itemtype,iid,ureview,urating){
-    if(nreview&&nreview!==""){
-        const newreview= reviewModel.create({userid:uid,type:itemtype,itemid:iid,review:ureview,rating:urating});
-    }
-    else{ 
-        const newreview=null;
+    let newreview=null
+    if(ureview&&ureview!==""){
+        console.log(uid,itemtype,iid,ureview,urating);
+        newreview= await reviewModel.create({userid:uid,type:itemtype,itemid:iid,review:ureview,rating:urating});
+
     }
     
-    return newreview;
+
 
 }
 async function getReviewbyUserID(uid){

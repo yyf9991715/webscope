@@ -17,4 +17,24 @@ async function main(){
     });
     
 }
-main();
+
+
+async function test(){
+    let param= new URLSearchParams();
+    param.append("userid",1);
+    param.append("itemid",3);
+    param.append("review","It's a fantasy book");
+    param.append("rating",5)
+
+    await axios.post(
+        "http://localhost:4000/review/newreview",
+        param,
+        {
+            'Content-Type' :'application/x-www-form-urlencoded',
+        }
+    ).then(function(resb){
+        console.log(resb.data)
+    });
+    
+}
+test();

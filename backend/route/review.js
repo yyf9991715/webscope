@@ -4,7 +4,7 @@ var dbReview=require("../model/reviewModel.js");
 
 router.post("/newreview", async function(req,res){
 //userid, itemid,review, rating,type
-    data=req.data;
+    data=req.body;
     console.log(data);
     if(data.userid&&data.itemid){
         let new_review = await dbReview.create_review(data.userid,"books", data.itemid,data.review,data.rating);
@@ -29,4 +29,5 @@ router.get("/byitemid/:iid", async function(req,res){
     console.log(results);
     res.json(results);
 });
+
 module.exports = router;
