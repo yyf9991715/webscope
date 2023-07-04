@@ -27,6 +27,7 @@ function App() {
     <div className="container">
       <Routes>
         <Route path="/" exact Component={Home} />
+        <Route path="/home" exact Component={Home} />
         <Route path="/login" Component={Login} />
         <Route path="/review" Component={Reviewandrating} />
         <Route path="/signup" Component={Signup} />
