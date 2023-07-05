@@ -1,6 +1,9 @@
 const Book = require("./bookModel.js");
 const User = require("./userModel.js");
 const Review = require("./reviewModel.js");
+const Lib=require("./libModel.js");
+
+
 async function main(){
     testdata=await Book.getAllBookName();
     for(let i=0;i<20;i++){
@@ -63,5 +66,32 @@ async function testcalc_new_SUM(){
     console.log(testdata);
 }
 
-testcalc_new_SUM()
+async function testaddNewRating(){
+    testdata=await Book.addNewRating(1,3);
+    console.log(testdata);
+}
+//testcalc_new_SUM()
 // testaddNewRating();
+
+async function testcreate_mark(){
+    testdata=await Lib.create_mark(1,22,"book");
+    console.log(testdata);
+}
+
+testcreate_mark();
+async function testgetlibbyUserID(){
+
+    testdata=await Lib.getlibbyUserID(1);
+    console.log(testdata);
+}
+
+// testgetlibbyUserID();
+
+async function testdelLib(){
+
+    Lib.delLib(1,22);
+    testdata=await Lib.getlibbyUserID(1);
+    console.log(testdata);
+}
+
+// testdelLib();

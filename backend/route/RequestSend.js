@@ -19,7 +19,7 @@ async function main(){
 }
 
 
-async function test(){
+async function testrating(){
     let param= new URLSearchParams();
     param.append("userid",3);
     param.append("itemid",20);
@@ -37,4 +37,36 @@ async function test(){
     });
     
 }
-test();
+async function testmark(){
+    let param= new URLSearchParams();
+    param.append("userid",3);
+    param.append("itemid",22);
+    console.log("testmark")
+    await axios.post(
+        "http://localhost:4000/lib/newlib",
+        param,
+        {
+            'Content-Type' :'application/x-www-form-urlencoded',
+        }
+    ).then(function(resb){
+        console.log(resb.data)
+    });
+    
+}
+async function testdel(){
+    let param= new URLSearchParams();
+    param.append("userid",3);
+    param.append("itemid",20);
+    console.log("testmarkdel")
+    await axios.post(
+        "http://localhost:4000/lib/del",
+        param,
+        {
+            'Content-Type' :'application/x-www-form-urlencoded',
+        }
+    ).then(function(resb){
+        console.log(resb.data)
+    });
+    
+}
+testdel();
