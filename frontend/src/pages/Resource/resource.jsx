@@ -7,6 +7,7 @@ import axios from 'axios';
 import Starrating from '../../components/Rating&Review/Starrating';
 import {useNavigate } from "react-router-dom";
 import {MdFavorite} from "react-icons/md"
+import {BsRobot} from "react-icons/bs"
 
 const Resource = (props) => {
   const navigate=useNavigate()
@@ -60,7 +61,9 @@ console.log(data);
         })
     }
   }
+const handleclick=()=>{
 
+}
   const renderStarRating = (rating) => {
     // Rating rendering logic here
   };
@@ -98,6 +101,21 @@ console.log(data);
           color={add?"red":"#e4e5e9"}
           />
           <p>add to my library</p>
+
+          <div className="robot-container">
+     
+      <div className="robot-content">
+        <Link className="link"to="/chatgpt">
+        <BsRobot
+        className='robot'
+        size={40}
+        onClick={handleclick}
+        color="#55c360"/>
+      
+        <p>go to chatgpt room</p>
+        </Link>
+        </div>
+      </div>
           </div>
       </div>
       <div className="content-container">
@@ -130,10 +148,11 @@ console.log(data);
             />
         </div>
       </div>
+    
+   
 
-      
-      
     </div>
+      
   );
 };
 
