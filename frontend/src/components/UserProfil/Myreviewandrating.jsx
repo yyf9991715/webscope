@@ -2,6 +2,8 @@ import axios from 'axios'
 import React,{useState,useEffect}  from 'react'
 import "./Myreviewandrating.css"
 import {Link} from 'react-router-dom';
+import Starrating from '../Rating&Review/Starrating';
+
 
 const Myreviewandrating = () => {
   var nuserid=localStorage.getItem("userid");
@@ -26,25 +28,28 @@ const Myreviewandrating = () => {
   return (
     <div>
       <div className='myreviewandrating'>
-          <h1 className='mainhead1'>User: {username} Review&Rating</h1>
+          <h1 className='mainhead1'>My Review&Rating</h1>
           <br />
-          <div>
+          <div className='myreview-container'>
           {data.map((value)=>(
              <div className="myreview">
                <div className="myreview-review">
-                 {value.review}
+               <h3>{value.itemName}</h3>
+                
                  <div className="myreview-rating">
-                   Rating: {value.rating} 
+                  
+                   <Starrating
+                   nrating={value.rating}/>
+                    Rating: {value.rating} 
                  </div>
-               </div>
-               <div className='myreview-book'>
-                    <p>Bookid:{value.itemid}</p>
-                    <a href={"/resource/"+value.itemid}
+                 {value.review}
+                 <a href={"/resource/"+value.itemid}
                     style={style.linktext}>
                         see book
                     </a>
 
                </div>
+               
              </div>
           ))}
           </div>

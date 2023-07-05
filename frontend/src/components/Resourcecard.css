@@ -13,12 +13,6 @@
     flex-direction: column;
   }
   
-  .resource-image2 {
-    margin-top: 30%;
-    width: 30%;
-    height: 100%;
-    border-radius: 4px;
-  }
   
   .resource-details2 h4 {
     font-size: 1.2em;
