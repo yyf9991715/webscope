@@ -16,6 +16,7 @@
     width: 100%;
     margin-left: 5px;
     margin-right:5px;
+    
 }
 input:focus{
     outline: none;
@@ -25,3 +26,9 @@ input:focus{
     color:black;
 }
 
+.output-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}

@@ -12,7 +12,7 @@ const Reviewandrating = ({nitemid,nuserid}) => {
   const [data,setData]=useState({
     userid:nuserid,
     itemid:nitemid,
-    review:"",
+    review:"null",
     rating:""
   })
 
@@ -32,6 +32,7 @@ const Reviewandrating = ({nitemid,nuserid}) => {
     // Handle send review logic here
     console.log(data);
     if(data.userid){
+      if(data.rating){
     axios.post("http://localhost:4000/review/newreview",data)
       .then(res=>{
           console.log(res.data.Status);
@@ -43,6 +44,9 @@ const Reviewandrating = ({nitemid,nuserid}) => {
             alert("please write something!")
           }
       })
+      }else{
+        alert("please select rating");
+      }
     } else{
       alert("not login,please login firstly");
     }
@@ -63,7 +67,7 @@ const Reviewandrating = ({nitemid,nuserid}) => {
           <br />
           <select name="selectedFruit"
           onChange={e=>setData({...data,rating:e.target.value})} >
-            <option value={0}>--------------------------------Select rating------------------------------</option>
+            <option >--------------------------------Select rating------------------------------</option>
             <option value={1}>1:you didn’t enjoy it at all and would not recommend it to others.</option>
             <option value={2}>2:you didn’t enjoy it but might recommend it to others.</option>
             <option value={3}>3:you enjoyed it, but it wasn’t your favorite.</option>

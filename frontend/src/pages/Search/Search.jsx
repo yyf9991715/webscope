@@ -33,9 +33,12 @@ useEffect(()=>{
     <div className="search-container">
       <div className='searchbar-container'>
         <Searchbar/>
+        <br />
       </div>
-      
+      <hr />
+      <p>The following is the some books:</p>
       <div className="resources-container">
+
         {values.map((value) => (
           //<Link to={`/Resource/${index}`} key={index} className="resource-link">
               
