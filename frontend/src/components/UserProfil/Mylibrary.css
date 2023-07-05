@@ -1,0 +1,24 @@
+.mylib-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.mylib{
+    display: flex;
+    justify-content: center;
+    gap:5px;
+    width: 100%;
+    margin-bottom: 1rem;
+   
+}
+.mylib-content{
+    width:90%;
+    background-color: #aed9f9;
+    border-radius: 4px;
+    min-height: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.mylib-itemname{
+    font-family: 'Times New Roman', Times, serif;
+}

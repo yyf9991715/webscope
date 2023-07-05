@@ -16,7 +16,11 @@ const Resource = (props) => {
   console.log(bookid);
   const [ratings,setRatings]=useState([{}]);
   const[add,setAdd]=useState(false);
-
+  const userid=Number(localStorage.getItem("userid"));
+  const itemid=bookid;
+  const data={userid,itemid};
+  const results=[];
+console.log(data);
   
   useEffect(()=>{
       axios.get('http://localhost:4000/book/detail/'+bookid)
@@ -29,7 +33,14 @@ const Resource = (props) => {
         axios.get("http://localhost:4000/review/byitemid/"+bookid)
           .then(res=>{
             setRatings(res.data);
-            console.log("ratings",res.data);
+          })
+        axios.get("http://localhost:4000/lib/byuid/"+userid)
+          .then(res=>{
+            let results=res.data;
+            console.log("results",results);
+            for(let i=0;i<results.length;i++){
+              if(results[i].itemid===itemid) setAdd(true);
+            }
           })
   },[]);
   const handleOnclick=()=>{
@@ -37,6 +48,17 @@ const Resource = (props) => {
       setAdd(false);
     }else
     setAdd(true);
+    if(!add){
+      axios.post("http://localhost:4000/lib/newlib",data)
+        .then(res=>{
+          if(res.data.Status==="success") alert("add to my library successfully!")
+        })
+    }else{
+      axios.post("http://localhost:4000/lib/del",data)
+        .then(res=>{
+          if(res.data.Status==="success") alert("cancel favorite");
+        })
+    }
   }
 
   const renderStarRating = (rating) => {
