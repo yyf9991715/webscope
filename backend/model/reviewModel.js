@@ -9,6 +9,7 @@ const ReviewSchema =new mongoose.Schema({
     userName:String,
     type:String,
     itemid:Number,
+    itemName:String,
     review:String,
     rating:Number,
 }
@@ -23,12 +24,15 @@ async function create_review(uid,itemtype,iid,ureview,urating){
     // if(ureview&&ureview!==""){
         console.log(uid,itemtype,iid,ureview,urating);
         const u=await getUserById(uid);
+        const i=await Book.getBookDetail(iid);
         console.log(u.name);
+        console.log(i.title)
         newreview= await reviewModel.create({
             userid:uid,
             userName:u.name,
             type:itemtype,
             itemid:iid,
+            itemName:i.title,
             review:ureview,
             rating:urating
         });

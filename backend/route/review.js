@@ -10,7 +10,6 @@ router.post("/newreview", async function(req,res){
         let new_review = await dbReview.create_review(data.userid,"books", data.itemid,data.review,data.rating);
         if(new_review!==null)res.json({Status:"success",review:new_review});
         else res.json({Status:"failed to create new rating"})
-
     }
     else res.json({Status:"request failed"})
 });
@@ -18,6 +17,10 @@ router.get("/byuid/:uid", async function(req,res){
     let id=req.params.uid;
     console.log("get review by user id",id)
     let results= await dbReview.getReviewbyUserID(id);
+    // for(let i = 0;i<results.length;++i){
+    //     itemid=results[i].itemid;
+
+    // }
     console.log(results);
     res.json(results);
 });
