@@ -20,12 +20,13 @@ const person = {
 const Userprofilsetting =()=>{
 
   const {activepage}=useParams()
+  var nusername=localStorage.getItem("userName");
 
   //alert(activepage)
   return(
     <div className="userprofil">
       <Singlebanner 
-      heading="My Profile"
+      heading={nusername+" Profile"}
       bannerimage={imgbac}
       />
       <div className="sub-userprofil">

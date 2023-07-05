@@ -71,7 +71,7 @@ const Resource = (props) => {
            <br />
           <MdFavorite
           className='heart'
-          size={40}
+          size={30}
           onClick={handleOnclick}
           color={add?"red":"#e4e5e9"}
           />
@@ -88,10 +88,13 @@ const Resource = (props) => {
                   User:{rating.userName}
                   </div>
                 <div className="user-comment">
-                  {rating.review}
+                  
                   <div className="user-rating">
-                    Rating: {rating.rating}
+                    <Starrating
+                    nrating={rating.rating}/>
+                     Rating: {rating.rating}
                   </div>
+                  {rating.review}
                 </div>
               </div>
             </div>

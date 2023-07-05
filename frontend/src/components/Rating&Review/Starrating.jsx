@@ -27,7 +27,7 @@ function Starrating({nrating}) {
 
               <FaStar 
                 className="star" 
-                size={40}
+                size={20}
                 color={ratingValue<=(rating)?"#ffc107":"#e4e5e9"}
               />
             </label>

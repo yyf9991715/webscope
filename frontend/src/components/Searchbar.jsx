@@ -27,7 +27,7 @@ function Searchbar() {
           console.log("results",results);
         })
       }else{
-        alert("please type something to seearch");
+        alert("please type something to search");
       }
   };
 
@@ -41,6 +41,7 @@ function Searchbar() {
             onChange={e=>setData({...data,keyword:e.target.value})}/>
             <FaSearch id="search-icon"
             onClick={handleSubmit}
+            size={35}
             style={{ cursor:"pointer" }}
             />  
       </div>
