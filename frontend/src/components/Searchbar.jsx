@@ -17,7 +17,7 @@ function Searchbar() {
   const handleSubmit= async (event)=>{
       if(data.keyword){
       event.preventDefault();
-      axios.post("http://localhost:4000/book/querykey",data)
+      axios.post("/book/querykey",data)
         .then(res=>{
           let results=res.data;
           for(let i=0;i<results.length;++i){

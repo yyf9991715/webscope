@@ -15,7 +15,7 @@ const Myreviewandrating = () => {
   }
   }
   useEffect(()=>{
-    axios.get("http://localhost:4000/review/byuid/"+nuserid)
+    axios.get("/review/byuid/"+nuserid)
       .then(res=>{
         let results=res.data;
       for(let i=0;i<results.length;++i){

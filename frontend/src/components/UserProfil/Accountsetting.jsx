@@ -18,7 +18,7 @@ const Accountsetting = () => {
   const handleSubmit=(event)=>{
     event.preventDefault();
     // if(values.newmail){
-      axios.post("http://localhost:4000/user/upuserpro",values)
+      axios.post("/user/upuserpro",values)
       .then(res=>{
         alert("already changed");
         console.log(res.data.data.name,res.data.data.email);

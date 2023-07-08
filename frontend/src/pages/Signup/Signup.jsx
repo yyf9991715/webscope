@@ -20,7 +20,7 @@ export default function Signup (){
     const handleSubmit=(event)=>{
         event.preventDefault();
         if(values.name&&values.email&&values.password&&values.passwordagain){
-            axios.post("http://localhost:4000/user/createnewuser",values)
+            axios.post("/user/createnewuser",values)
             .then(res=>{
                 if(res.data.Status === 'success') {
                     alert("already successfully sign up, you could login in now!");

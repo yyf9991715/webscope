@@ -21,7 +21,7 @@ export default function Login (){
 
     const handleSubmit=(event)=>{
         event.preventDefault();
-        axios.post("http://localhost:4000/user/auth",values)
+        axios.post("/user/auth",values)
             .then(res=>{
                 if(res.data.Status === 'success') {
                         console.log(res.data.id);

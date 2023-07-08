@@ -33,7 +33,7 @@ const Reviewandrating = ({nitemid,nuserid}) => {
     console.log(data);
     if(data.userid){
       if(data.rating){
-    axios.post("http://localhost:4000/review/newreview",data)
+    axios.post("/review/newreview",data)
       .then(res=>{
           console.log(res.data.Status);
           if(res.data.Status==="success") {
