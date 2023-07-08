@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -29,7 +29,7 @@ body {
   background-color: #55c360;
   color: white;
   display: flex;
-  justify-content: space-between; /* Align items to the left and right */
+  justify-content: space-between;
   align-items: center;
   height: 8vh;
   gap: 0rem;
@@ -37,29 +37,29 @@ body {
 }
 
 .site-title {
-  font-size: 0; /* Hide the text */
+  font-size: 0;
 }
 
 .site-title img {
-  height: 2rem; /* Adjust the height of the image */
-  width: auto; /* Let the width scale accordingly */
-  margin-top: 10px; /* Adjust as needed to vertically center the image */
-  margin-bottom: 10px; /* Adjust as needed to vertically center the image */
+  height: 2rem;
+  width: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
   display: inline-block;
 }
 
+.nav ul li:last-child {
+  margin-left: auto;
+  margin-right: 0;
+}
+
 .nav ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  font-size: 19px;
   display: flex;
   gap: 1rem;
-  align-items: center; /* Vertically align items */
+  align-items: center;
   height: 75%;
-  margin-left: auto; /* Push the button to the right */
-  margin-right: -1rem;
-  height: 75%;
+  margin-left: auto;
+  list-style: none;
 }
 
 .nav a {
@@ -97,146 +97,33 @@ body {
   text-align: center;
   font-weight: 500;
   background-color: #77b977;
-  border-color: #f0f0f0; /* Login button color */
+  border-color: #f0f0f0;
   height: 75%;
-  margin-left: auto; /* Push the button to the right */
+  margin-left: auto;
   margin-right: -1rem;
 }
 
 .logout-button {
-  color: #f0f0f0;
-  * {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-  }
-
-  body {
-    margin: 0;
-  }
-
-  .searchbar-container {
-    padding-top: 10px;
-    width: 40%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 200px;
-    color: black;
-  }
-
-  .container {
-    margin: 1rem;
-    text-align: center;
-  }
-
-  .nav {
-    color: white;
-    display: flex;
-    justify-content: space-between; /* Align items to the left and right */
-    align-items: center;
-    height: 8vh;
-    gap: 0rem;
-    padding: 1rem;
-  }
-
-  .site-title {
-    font-size: 0; /* Hide the text */
-  }
-
-  .site-title img {
-    height: 2rem; /* Adjust the height of the image */
-    width: auto; /* Let the width scale accordingly */
-    margin-top: 10px; /* Adjust as needed to vertically center the image */
-    margin-bottom: 10px; /* Adjust as needed to vertically center the image */
-    display: inline-block;
-  }
-
-  .nav ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    font-size: 19px;
-    display: flex;
-    gap: 1rem;
-    align-items: center; /* Vertically align items */
-    height: 75%;
-    margin-left: auto; /* Push the button to the right */
-    margin-right: -1rem;
-    height: 75%;
-  }
-
-  .nav a {
-    color: inherit;
-    text-decoration: none;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0.25rem;
-  }
-
-  .nav li button {
-    border: 2px solid transparent;
-    border-radius: 20px;
-    padding: 8px 16px;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-    color: #f0f0f0;
-  }
-
-  .logout-button {
-    /* Add your styles for the Logout button here */
-    color: #f0f0f0;
-    font-weight: bold;
-    border: none;
-    border-radius: 20px;
-    padding: 8px 16px;
-    font-size: 19px;
-    cursor: pointer;
-    font-weight: 500;
-    margin-right: 1rem; /* Add some left margin to separate it from other elements */
-  }
-
-  .nav li.login-button a,
-  .nav li.signup-button a {
-    display: inline-block;
-    border: 2px solid transparent;
-    border-radius: 20px;
-    padding: 8px 16px;
-    font-size: 19px;
-    text-decoration: none;
-    color: #f0f0f0;
-    text-align: center;
-    font-weight: 500;
-  }
-
-  .nav li.login-button a {
-    background-color: #77b977;
-    border-color: #f0f0f0; /* Login button color */
-    height: 75%;
-    margin-left: auto; /* Push the button to the right */
-    margin-right: -1rem;
-  }
-
-  .nav li.signup-button a {
-    height: 75%;
-  }
-
-  font-weight: bold;
-  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
   border-radius: 20px;
   padding: 8px 16px;
   font-size: 19px;
-  cursor: pointer;
+  text-decoration: none;
+  color: #f0f0f0;
+  text-align: center;
   font-weight: 500;
-  margin-right: 1rem; /* Add some left margin to separate it from other elements */
+  background-color: #55c360;
+  height: 100%;
 }
 
 .nav li.login-button a,
 .nav li.signup-button a {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 2px solid transparent;
   border-radius: 20px;
   padding: 8px 16px;
@@ -249,9 +136,9 @@ body {
 
 .nav li.login-button a {
   background-color: #77b977;
-  border-color: #f0f0f0; /* Login button color */
+  border-color: #f0f0f0;
   height: 75%;
-  margin-left: auto; /* Push the button to the right */
+  margin-left: auto;
   margin-right: -1rem;
 }
 
