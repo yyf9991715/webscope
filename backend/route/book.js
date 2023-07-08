@@ -6,6 +6,30 @@ router.get("/",function(req,res){
     res.send("GET route on book");
 });
 router.get("/getall",async function(req,res){
-    res.json(dbBook.getAllBookName());
-} )
+    let book=await dbBook.getAllBookName();
+    console.log("get all book name");
+    res.json({Bookdata:book.slice(0,20)});
+});
+
+router.get("/detail/:bookid",async function(req,res){
+    let qid=req.params.bookid;
+    if(qid){
+        let book=await dbBook.getBookDetail(qid);
+        console.log(book);
+        res.json({Status:"success",resbook:book});
+    }
+    else res.json({Status:"failed"});
+});
+
+router.post("/querykey",async function(req,res){
+    console.log(req.body.keyword);
+    let keyword=req.body.keyword; 
+    let booklist= await dbBook.getBookByKey(keyword);
+    res.json(booklist);
+});
+
+
+router.get("/rating",async function(req,res){
+    res.json({})
+})
 module.exports = router;
