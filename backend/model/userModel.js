@@ -112,7 +112,13 @@ async function addNewUser(newName, newPw,newMail){
     newid=await idGenerater();
     console.log(newid,newName,newPw,newMail );
     console.log(typeof newid);
-    const nUser= await User.create({id:newid,name:newName,password:newPw,email:newMail});
+    let nUser=null;
+    const exist=await checkUserExist(newdata);
+    if(exist===false){
+         nUser= await User.create({id:newid,name:newName,password:newPw,email:newMail});
+    }
+    
+
     return nUser;
 }
 // Export model
