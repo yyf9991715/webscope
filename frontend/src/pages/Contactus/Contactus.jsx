@@ -1,5 +1,5 @@
 import webscopeimg from "../../assets/webscope.png"
-import img from "../../assets/98ee5cf8b55f49b8922d57a18e771827-3.png"
+import img from "../../assets/elearninghelper.png"
 import { Grid,Paper,Typography} from '@mui/material';
 import "./Contactus.css"
 import Singlebanner from "../../components/Singlebanner"
