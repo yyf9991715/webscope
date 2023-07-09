@@ -45,6 +45,7 @@ console.log(data);
           })
   },[]);
   const handleOnclick=()=>{
+    if(localStorage.getItem("userid")){
     if(add){
       setAdd(false);
     }else
@@ -60,8 +61,10 @@ console.log(data);
           if(res.data.Status==="success") alert("cancel favorite");
         })
     }
-    
+  }else{
+    alert("please login first");
   }
+}
   const renderStarRating = (rating) => {
     // Rating rendering logic here
   };
