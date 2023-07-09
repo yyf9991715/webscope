@@ -24,18 +24,18 @@ const Resource = (props) => {
 console.log(data);
   
   useEffect(()=>{
-      axios.get('http://localhost:4000/book/detail/'+bookid)
+      axios.get('https://webscope2023-backend.onrender.com/book/detail/'+bookid)
         .then(res=>{
           let resbook=res.data.resbook;
           if(resbook.avg_reviews) resbook.avg_reviews=resbook.avg_reviews.$numberDecimal;
           if(resbook.price) resbook.price=resbook.price.$numberDecimal;
           setValues(resbook);
         }).catch(err=>console.log(err))
-        axios.get("http://localhost:4000/review/byitemid/"+bookid)
+        axios.get("https://webscope2023-backend.onrender.com/review/byitemid/"+bookid)
           .then(res=>{
             setRatings(res.data);
           })
-        axios.get("http://localhost:4000/lib/byuid/"+userid)
+        axios.get("https://webscope2023-backend.onrender.com/lib/byuid/"+userid)
           .then(res=>{
             let results=res.data;
             console.log("results",results);
@@ -45,24 +45,20 @@ console.log(data);
           })
   },[]);
   const handleOnclick=()=>{
-    if(localStorage.getItem("userid")){
-      if(add){
-        setAdd(false);
-      }else
-      setAdd(true);
-      if(!add){
-        axios.post("http://localhost:4000/lib/newlib",data)
-          .then(res=>{
-            if(res.data.Status==="success") alert("add to my library successfully!")
-          })
-      }else{
-        axios.post("http://localhost:4000/lib/del",data)
-          .then(res=>{
-            if(res.data.Status==="success") alert("cancel favorite");
-          })
-      }
+    if(add){
+      setAdd(false);
+    }else
+    setAdd(true);
+    if(!add){
+      axios.post("https://webscope2023-backend.onrender.com/lib/newlib",data)
+        .then(res=>{
+          if(res.data.Status==="success") alert("add to my library successfully!")
+        })
     }else{
-      alert("please login first");
+      axios.post("https://webscope2023-backend.onrender.com/lib/del",data)
+        .then(res=>{
+          if(res.data.Status==="success") alert("cancel favorite");
+        })
     }
     
   }
