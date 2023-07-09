@@ -22,11 +22,13 @@ export default function Signup (){
         if(values.name&&values.email&&values.password&&values.passwordagain){
             axios.post("https://webscope2023-backend.onrender.com/user/createnewuser",values)
             .then(res=>{
-                if(res.data.Status === 'success') {
+                if(res.data.Status==="userexisted"){
+                    alert("user name has existed, please change user name.");
+                }else if(res.data.Status === 'success') {
                     alert("already successfully sign up, you could login in now!");
                 } else if(res.data.Status === 'pwddifferent'){
                     alert("twice inputting password are different!");
-                }else{
+                }else {
                     setError(res.data.Error);
                 }
             })
