@@ -17,8 +17,26 @@ async function main(){
     });
     
 }
+async function testnewUser(){
+    let param= new URLSearchParams();
+    param.append("name","test");
+    param.append("email","test@gmail");
 
+    param.append("password","test");
+    param.append("passwordagain","test");
 
+    await axios.post(
+        "http://localhost:4000/user/createnewuser",
+        param,
+        {
+            'Content-Type' :'application/x-www-form-urlencoded',
+        }
+    ).then(function(resb){
+        console.log(resb.data)
+    });
+    
+}
+testnewUser()
 async function testrating(){
     let param= new URLSearchParams();
     param.append("userid",3);
@@ -69,4 +87,4 @@ async function testdel(){
     });
     
 }
-testdel();
+

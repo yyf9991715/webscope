@@ -104,9 +104,12 @@ router.post("/updateemail",async function(req,res){
 router.post("/createnewuser/",async function(req,res){
     let data=req.body;
     console.log(data);
-    if(data.password===data.passwordagain){
+    if(data.name&&(dbUser.checkUserExist(data.name)!==false)){
+        res.json({Status:"userexisted"})
+    }
+    else if(data.password===data.passwordagain){
         const nUserdata= dbUser.addNewUser(data.name,data.password,data.email);
-        if(nUserdata)res.json({Status:"success"});
+        if(nUserdata&&nUserdata!==null)res.json({Status:"success"});
         else res.json({Status:"failed"});
     }else{
         res.json({Status:"pwddifferent"});
