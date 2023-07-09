@@ -8,6 +8,7 @@ const Navigationbar = () => {
 
     const handleLogout = () => {
         localStorage.clear();
+        alert("log out successfully!");
         navigate("/");
     };
 
