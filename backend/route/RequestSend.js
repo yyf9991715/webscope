@@ -17,9 +17,10 @@ async function main(){
     });
     
 }
+
 async function testnewUser(){
     let param= new URLSearchParams();
-    param.append("name","test");
+    param.append("name","test2");
     param.append("email","test@gmail");
 
     param.append("password","test");
@@ -36,7 +37,7 @@ async function testnewUser(){
     });
     
 }
-testnewUser()
+
 async function testrating(){
     let param= new URLSearchParams();
     param.append("userid",3);
@@ -55,6 +56,7 @@ async function testrating(){
     });
     
 }
+
 async function testmark(){
     let param= new URLSearchParams();
     param.append("userid",3);
@@ -87,4 +89,7 @@ async function testdel(){
     });
     
 }
+
+
+testnewUser()
 
