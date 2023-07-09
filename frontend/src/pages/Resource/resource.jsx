@@ -45,25 +45,27 @@ console.log(data);
           })
   },[]);
   const handleOnclick=()=>{
-    if(add){
-      setAdd(false);
-    }else
-    setAdd(true);
-    if(!add){
-      axios.post("http://localhost:4000/lib/newlib",data)
-        .then(res=>{
-          if(res.data.Status==="success") alert("add to my library successfully!")
-        })
+    if(localStorage.getItem("userid")){
+      if(add){
+        setAdd(false);
+      }else
+      setAdd(true);
+      if(!add){
+        axios.post("http://localhost:4000/lib/newlib",data)
+          .then(res=>{
+            if(res.data.Status==="success") alert("add to my library successfully!")
+          })
+      }else{
+        axios.post("http://localhost:4000/lib/del",data)
+          .then(res=>{
+            if(res.data.Status==="success") alert("cancel favorite");
+          })
+      }
     }else{
-      axios.post("http://localhost:4000/lib/del",data)
-        .then(res=>{
-          if(res.data.Status==="success") alert("cancel favorite");
-        })
+      alert("please login first");
     }
+    
   }
-const handleclick=()=>{
-
-}
   const renderStarRating = (rating) => {
     // Rating rendering logic here
   };
@@ -109,7 +111,6 @@ const handleclick=()=>{
         <BsRobot
         className='robot'
         size={40}
-        onClick={handleclick}
         color="#55c360"/>
       
         <p>go to chatgpt room</p>
