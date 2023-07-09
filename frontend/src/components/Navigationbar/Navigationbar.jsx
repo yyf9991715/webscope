@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../../assets/e114b11cc9214759b53d1ea0a37a4ca1.png";
+import logo from "../../assets/whitelogosmall.png";
 import "./Navigationbar.css";
 
 const Navigationbar = () => {
@@ -8,6 +8,7 @@ const Navigationbar = () => {
 
     const handleLogout = () => {
         localStorage.clear();
+        alert("log out successfully!");
         navigate("/");
     };
 

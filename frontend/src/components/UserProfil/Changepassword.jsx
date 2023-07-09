@@ -14,7 +14,7 @@ function Changepassword() {
   const handleSubmit=(event)=>{
     event.preventDefault();
     if(values.password&&values.passwordagain){
-      axios.post("http://localhost:4000/user/updatePW",values)
+      axios.post("https://webscope2023-backend.onrender.com/user/updatePW",values)
       .then(res=>
       {
         console.log(res.data.Status); 

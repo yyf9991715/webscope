@@ -111,9 +111,11 @@ async function changeName(userID,newdata){
 async function addNewUser(newName, newPw,newMail){
     newid=await idGenerater();
     console.log(newid,newName,newPw,newMail );
-    console.log(typeof newid);
-    const nUser= await User.create({id:newid,name:newName,password:newPw,email:newMail});
+    let nUser=null;
+    nUser= await User.create({id:newid,name:newName,password:newPw,email:newMail});
+    if(nUser)
     return nUser;
+
 }
 // Export model
 //module.exports = userModel;

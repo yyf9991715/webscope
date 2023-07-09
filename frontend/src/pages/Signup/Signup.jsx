@@ -1,7 +1,7 @@
 import axios from 'axios';
+import { Link, useNavigate } from "react-router-dom";
 import "./Signup.css"
 import Footer2 from '../../components/Footer/Footer2';
-import { Link } from "react-router-dom";
 import { useState} from "react";
 
 const style={
@@ -17,13 +17,19 @@ export default function Signup (){
         password:"",
         passwordagain:""
     })
+
+    const navigate = useNavigate();
     const handleSubmit=(event)=>{
         event.preventDefault();
         if(values.name&&values.email&&values.password&&values.passwordagain){
-            axios.post("http://localhost:4000/user/createnewuser",values)
+            axios.post("https://webscope2023-backend.onrender.com/user/createnewuser",values)
             .then(res=>{
-                if(res.data.Status === 'success') {
+                if(res.data.Status==="userexisted"){
+                    alert("user name has already existed!");
+                }
+                else if(res.data.Status === 'success') {
                     alert("already successfully sign up, you could login in now!");
+                    navigate('/login');
                 } else if(res.data.Status === 'pwddifferent'){
                     alert("twice inputting password are different!");
                 }else{

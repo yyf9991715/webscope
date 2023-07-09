@@ -8,6 +8,8 @@ import resourceimg from "../../assets/resource.jpg"
 import ratingimg from "../../assets/rating.jpg"
 import { Link } from "react-router-dom"
 import ai from "../../assets/ai.jpg"
+import logo from "../../assets/whitelogo.png";
+import React from "react";
 const style={
     theme:{
         height:"100vh"
@@ -20,7 +22,7 @@ export default function Home (){
         <div className="sub-home1"style={style.theme}>
             <div className="home-intro">
                 <h1 className="title">
-                    eLearningHelper
+                    <img src={logo} alt="eLearningHelper Logo" />
                 </h1>
                 <h1 >
                     Welcome to the worlds's lastest resource for learning!

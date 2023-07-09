@@ -1,9 +1,7 @@
 .sub-home1 {
     width: 100%;
-    height: 100vh;
     overflow: hidden;
     position: relative;
-    margin-top: -3rem;
 }
 
 .sub-home1::before {
@@ -21,28 +19,28 @@
 }
 
 
-.sub-home1 .home-intro{
+.sub-home1 .home-intro {
     position: absolute;
-    top: 40%;
+    top: 32%; /* Adjust the top value to move the element higher */
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.sub-home1 .home-intro h1{
-    margin-top: 20px;
+.sub-home1 .home-intro h1 {
+    margin-top: -3rem; /* Adjust the margin-top value to bring the text closer to the image */
     color: white;
     font-size: 60px;
     font-weight: 450;
     color: #f0f0f0;
 }
 
-.sub-home1 .home-intro .title{
+.sub-home1 .home-intro .title {
     margin-top: 20px;
-    color: white;
-    font-size: 60px;
-    font-family:fantasy;
-    font-style: italic;
-    font-weight: 100;
+}
+
+.sub-home1 .home-intro .title img {
+    width: 80%; /* Adjust the width value to make the image smaller */
+    height: auto;
 }
 
 .sub-home2 {
@@ -54,6 +52,7 @@
     animation-name: moveUp;
     animation-duration: 1s;
     animation-fill-mode: forwards; /* Keeps the element in the final state after the animation ends */
+    margin-top: -3rem;
 }
 
 @keyframes moveUp {

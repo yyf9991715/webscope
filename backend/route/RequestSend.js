@@ -7,7 +7,7 @@ async function main(){
     param.append("passwordagain","");
 
     await axios.post(
-        "http://localhost:4000/user/updatePW",
+        "https://webscope2023-backend.onrender.com/user/updatePW",
         param,
         {
             'Content-Type' :'application/x-www-form-urlencoded',
@@ -18,6 +18,25 @@ async function main(){
     
 }
 
+async function testnewUser(){
+    let param= new URLSearchParams();
+    param.append("name","test2");
+    param.append("email","test@gmail");
+
+    param.append("password","test");
+    param.append("passwordagain","test");
+
+    await axios.post(
+        "http://localhost:4000/user/createnewuser",
+        param,
+        {
+            'Content-Type' :'application/x-www-form-urlencoded',
+        }
+    ).then(function(resb){
+        console.log(resb.data)
+    });
+    
+}
 
 async function testrating(){
     let param= new URLSearchParams();
@@ -27,7 +46,7 @@ async function testrating(){
     param.append("rating",1)
 
     await axios.post(
-        "http://localhost:4000/review/newreview",
+        "https://webscope2023-backend.onrender.com/review/newreview",
         param,
         {
             'Content-Type' :'application/x-www-form-urlencoded',
@@ -37,13 +56,14 @@ async function testrating(){
     });
     
 }
+
 async function testmark(){
     let param= new URLSearchParams();
     param.append("userid",3);
     param.append("itemid",22);
     console.log("testmark")
     await axios.post(
-        "http://localhost:4000/lib/newlib",
+        "https://webscope2023-backend.onrender.com/lib/newlib",
         param,
         {
             'Content-Type' :'application/x-www-form-urlencoded',
@@ -59,7 +79,7 @@ async function testdel(){
     param.append("itemid",20);
     console.log("testmarkdel")
     await axios.post(
-        "http://localhost:4000/lib/del",
+        "https://webscope2023-backend.onrender.com/lib/del",
         param,
         {
             'Content-Type' :'application/x-www-form-urlencoded',
@@ -69,4 +89,7 @@ async function testdel(){
     });
     
 }
-testdel();
+
+
+testnewUser()
+
