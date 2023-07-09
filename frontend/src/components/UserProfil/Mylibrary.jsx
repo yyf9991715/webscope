@@ -16,7 +16,7 @@ const Mylibrary = () => {
   }
 
   useEffect(()=>{
-    axios.get("https://webscope2023-backend.onrender.com/lib/byuid/"+userid)
+    axios.get("/lib/byuid/"+userid)
           .then(res=>{
             setResults(res.data);
           })
@@ -25,7 +25,7 @@ const Mylibrary = () => {
  function handleOnclick(itemid){
   console.log(itemid);
   const data={userid,itemid};
-  axios.post("https://webscope2023-backend.onrender.com/lib/del",data)
+  axios.post("/lib/del",data)
       .then(res=>{
         if(res.data.Status==="success") {
           alert("cancel favorite");

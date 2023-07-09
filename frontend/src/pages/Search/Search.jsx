@@ -14,7 +14,7 @@ const [values,setValues]=useState([{
   avg_reviews:""
 }])
 useEffect(()=>{
-  fetch("https://webscope2023-backend.onrender.com/book/getall",{
+  fetch("/book/getall",{
     method:"GET",
   })
     .then((res)=>res.json())

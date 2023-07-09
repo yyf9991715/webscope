@@ -15,7 +15,7 @@ const Myreviewandrating = () => {
   }
   }
   useEffect(()=>{
-    axios.get("https://webscope2023-backend.onrender.com/review/byuid/"+nuserid)
+    axios.get("/review/byuid/"+nuserid)
       .then(res=>{
         let results=res.data;
       for(let i=0;i<results.length;++i){

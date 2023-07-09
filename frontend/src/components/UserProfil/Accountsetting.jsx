@@ -18,7 +18,7 @@ const Accountsetting = () => {
   const handleSubmit=(event)=>{
     event.preventDefault();
     // if(values.newmail){
-      axios.post("https://webscope2023-backend.onrender.com/user/upuserpro",values)
+      axios.post("/user/upuserpro",values)
       .then(res=>{
         alert("already changed");
         console.log(res.data.data.name,res.data.data.email);

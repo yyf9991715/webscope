@@ -25,7 +25,7 @@ const ChatGpt = () => {
 
         try {
             // Send user message to the server
-            const response = await axios.post('https://webscope2023-backend.onrender.com/chat', { message: inputValue });
+            const response = await axios.post('/chat', { message: inputValue });
 
             // Add ChatGPT's response to the chat
             setMessages((prevMessages) => [

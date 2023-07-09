@@ -24,18 +24,18 @@ const Resource = (props) => {
 console.log(data);
   
   useEffect(()=>{
-      axios.get('https://webscope2023-backend.onrender.com/book/detail/'+bookid)
+      axios.get('/book/detail/'+bookid)
         .then(res=>{
           let resbook=res.data.resbook;
           if(resbook.avg_reviews) resbook.avg_reviews=resbook.avg_reviews.$numberDecimal;
           if(resbook.price) resbook.price=resbook.price.$numberDecimal;
           setValues(resbook);
         }).catch(err=>console.log(err))
-        axios.get("https://webscope2023-backend.onrender.com/review/byitemid/"+bookid)
+        axios.get("/review/byitemid/"+bookid)
           .then(res=>{
             setRatings(res.data);
           })
-        axios.get("https://webscope2023-backend.onrender.com/lib/byuid/"+userid)
+        axios.get("/lib/byuid/"+userid)
           .then(res=>{
             let results=res.data;
             console.log("results",results);
@@ -50,12 +50,12 @@ console.log(data);
     }else
     setAdd(true);
     if(!add){
-      axios.post("https://webscope2023-backend.onrender.com/lib/newlib",data)
+      axios.post("/lib/newlib",data)
         .then(res=>{
           if(res.data.Status==="success") alert("add to my library successfully!")
         })
     }else{
-      axios.post("https://webscope2023-backend.onrender.com/lib/del",data)
+      axios.post("/lib/del",data)
         .then(res=>{
           if(res.data.Status==="success") alert("cancel favorite");
         })
