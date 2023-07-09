@@ -41,10 +41,10 @@ body {
 }
 
 .site-title img {
-  height: 2rem;
-  width: 120px;
-  margin-top: 2px;
-  margin-bottom: 2px;
+  height: 2.75rem;
+  width: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
   display: inline-block;
 }
 
@@ -57,7 +57,6 @@ body {
   display: flex;
   gap: 1rem;
   align-items: center;
-  height: 75%;
   margin-left: auto;
   list-style: none;
 }
@@ -104,7 +103,6 @@ body {
 }
 
 .logout-button {
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -117,12 +115,12 @@ body {
   text-align: center;
   font-weight: 500;
   background-color: #55c360;
-  height: 100%;
+  margin-left: auto;
 }
 
 .nav li.login-button a,
 .nav li.signup-button a {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   border: 2px solid transparent;
