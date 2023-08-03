@@ -2,6 +2,8 @@
 
 We aimed to do an easy-to-use webpage to make easier finding resources for learning.
 
+[![Advertisement](https://res.cloudinary.com/marcomontalbano/image/upload/v1691074281/video_to_markdown/images/youtube--KAjMv5EHimw-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/KAjMv5EHimw "Advertisement")
+
 ### Features
 - User Profile
     - Make users and log in
