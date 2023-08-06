@@ -19,7 +19,7 @@ router.post('/', async (req, res) => {
       const { Configuration, OpenAIApi } = require("openai");
 
       const configuration = new Configuration({
-        apiKey: "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",
+        apiKey: "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",
       });
       const openai = new OpenAIApi(configuration);
 
