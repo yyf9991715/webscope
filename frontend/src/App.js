@@ -14,7 +14,6 @@ import {Grid } from '@mui/material';
 import Search from "./pages/Search/Search";
 import Resource from "./pages/Resource/resource"
 import Chatgpt from "./pages/Chatgpt/Chatgpt"
-import Searched from "./pages/Searched";
 import Reviewandrating from './components/Rating&Review/Reviewandrating';
 
 
@@ -36,7 +35,6 @@ function App() {
         <Route path="/contactus" Component={Contactus} />
         <Route path="/privacy" Component={Privacy} />
         <Route path="/search" Component={Search} />
-        <Route path="/searched" Component={Searched} />
         <Route path="/resource/:id" Component={Resource} />
         <Route path="/user/:activepage" element={<Userprofilsetting/>} />
         <Route path="/chatgpt" Component={Chatgpt} />

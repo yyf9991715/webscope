@@ -7,7 +7,7 @@ async function main(){
     param.append("passwordagain","");
 
     await axios.post(
-        "https://webscope2023-backend.onrender.com/user/updatePW",
+        "http://localhost:4000/user/updatePW",
         param,
         {
             'Content-Type' :'application/x-www-form-urlencoded',
@@ -46,7 +46,7 @@ async function testrating(){
     param.append("rating",1)
 
     await axios.post(
-        "https://webscope2023-backend.onrender.com/review/newreview",
+        "http://localhost:4000/review/newreview",
         param,
         {
             'Content-Type' :'application/x-www-form-urlencoded',
@@ -63,7 +63,7 @@ async function testmark(){
     param.append("itemid",22);
     console.log("testmark")
     await axios.post(
-        "https://webscope2023-backend.onrender.com/lib/newlib",
+        "http://localhost:4000/lib/newlib",
         param,
         {
             'Content-Type' :'application/x-www-form-urlencoded',
@@ -79,7 +79,7 @@ async function testdel(){
     param.append("itemid",20);
     console.log("testmarkdel")
     await axios.post(
-        "https://webscope2023-backend.onrender.com/lib/del",
+        "http://localhost:4000/lib/del",
         param,
         {
             'Content-Type' :'application/x-www-form-urlencoded',

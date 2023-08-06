@@ -22,9 +22,17 @@ We aimed to do an easy-to-use webpage to make easier finding resources for learn
 - NodeJS as server platform
 - Chatgpt API
 - Render as desployment tool
-### How to run and deploy ElearningHelper in the localhost
+### How to run  ElearningHelper in the localhost
+- Download the source code from github https://github.com/yyf9991715/webscope
+- install node.js with npm, version 18.0.0 or newer 
 - Backend
+    - replace the ChatGPT key in /backend/route/chat.js with your key
+    - in the folder "/backend" run the command "npm install" to install dependency
     - run the backend with command "node server.js"
+- frontend
+    - in the folder "/frontend" command "npm install" to install dependency
+    - run the command "npm run build" to build the project
+    - run the command "serve -s build" and site will work in the localhost:3000
     
 ### Group Member
 Webscope

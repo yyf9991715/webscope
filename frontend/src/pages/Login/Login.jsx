@@ -21,7 +21,7 @@ export default function Login (){
 
     const handleSubmit=(event)=>{
         event.preventDefault();
-        axios.post("https://webscope2023-backend.onrender.com/user/auth",values)
+        axios.post("http://localhost:4000/user/auth",values)
             .then(res=>{
                 if(res.data.Status === 'success') {
                         console.log(res.data.id);
@@ -29,7 +29,7 @@ export default function Login (){
                         localStorage.setItem("userName",res.data.name);
                         localStorage.setItem("userEmail",res.data.email);
 
-                        navigate('/');  
+                        navigate('/search');  
                     
                 } else {
                     alert("username or password is wrong!")
