@@ -8,9 +8,9 @@ We aimed to do an easy-to-use webpage to make easier finding resources for learn
   [![](https://res.cloudinary.com/marcomontalbano/image/upload/v1691316628/video_to_markdown/images/youtube--fxIXqCb3rtQ-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/fxIXqCb3rtQ "")
 
 ### Features
--Login
--Sign up
--Search
+- Login
+- Sign up
+- Search
 - User Profile
     - Change name/emails/pwd
     - see and delete my library 
