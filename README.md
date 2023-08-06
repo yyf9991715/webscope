@@ -22,8 +22,10 @@ We aimed to do an easy-to-use webpage to make easier finding resources for learn
 - NodeJS as server platform
 - Chatgpt API
 - Render as desployment tool
-### How to run and deploy ElearningHelper
-
+### How to run and deploy ElearningHelper in the localhost
+- Backend
+    - run the backend with command "node server.js"
+    
 ### Group Member
 Webscope
 - Yifei Yao
