@@ -26,35 +26,35 @@ We aimed to do an easy-to-use webpage to make easier finding resources for learn
 
 ### Screenshot
 - login
-  ![image](https://github.com/yyf9991715/webscope/blob/test/img-folder/login.png)
+  ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/login.png)
 -sign up
-  ![image](https://github.com/yyf9991715/webscope/blob/test/img-folder/signup.png)
+  ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/signup.png)
 - Search page
-  ![image](https://github.com/yyf9991715/webscope/blob/test/img-folder/search.png)
+  ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/search.png)
 - Searched Python
-  ![image](https://github.com/yyf9991715/webscope/blob/test/img-folder/searched.png)
+  ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/searched.png)
 - Books Details Page
-  ![image](https://github.com/yyf9991715/webscope/blob/test/img-folder/bookdetails.png)
+  ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/bookdetails.png)
 - Accountsetting Page
-  ![image](https://github.com/yyf9991715/webscope/blob/test/img-folder/accountsetting.png)
+  ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/accountsetting.png)
 - My library Page
-  ![image](https://github.com/yyf9991715/webscope/blob/test/img-folder/mylib.png)
+  ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/mylib.png)
 - My rating and review Page
-  ![image](https://github.com/yyf9991715/webscope/blob/test/img-folder/myreview.png)
+  ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/myreview.png)
 - Change pwd Page
-  ![image](https://github.com/yyf9991715/webscope/blob/test/img-folder/changepwd.png)
+  ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/changepwd.png)
 - Navigation bar before login
-  ![image](https://github.com/yyf9991715/webscope/blob/test/img-folder/nav_brforelogin.png)
+  ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/nav_brforelogin.png)
 - Navigation bar after login
-  ![image](https://github.com/yyf9991715/webscope/blob/test/img-folder/nav_afterlogin.png)
+  ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/nav_afterlogin.png)
 - Footer
-  ![image](https://github.com/yyf9991715/webscope/blob/test/img-folder/footer.png)
+  ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/footer.png)
 - About Us Page
-  ![image](https://github.com/yyf9991715/webscope/blob/test/img-folder/aboutus.png)
+  ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/aboutus.png)
 - Contact Us Page
-  ![image](https://github.com/yyf9991715/webscope/blob/test/img-folder/Contactus.png)
+  ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/Contactus.png)
 - Privacy Page
-  ![image](https://github.com/yyf9991715/webscope/blob/test/img-folder/privacy.png)
+  ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/privacy.png)
 ### Technical Architecture
 - MERN stack application
 - MongoDB as database
