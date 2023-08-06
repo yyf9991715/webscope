@@ -16,6 +16,31 @@ We aimed to do an easy-to-use webpage to make easier finding resources for learn
     - Add to my library functionality
 - ChatGPT
     - To better understand topics and books
+
+### Screenshot
+- login
+  ![image](https://github.com/yyf9991715/webscope/blob/test/img-folder/login.png)
+-sign up
+  ![image](https://github.com/yyf9991715/webscope/blob/test/img-folder/signup.png)
+- Navigation bar before login
+  ![image](https://github.com/yyf9991715/webscope/blob/test/img-folder/nav_brforelogin.png)
+- Navigation bar after login
+  ![image](https://github.com/yyf9991715/webscope/blob/test/img-folder/nav_afterlogin.png)
+- Footer
+  ![image](https://github.com/yyf9991715/webscope/blob/test/img-folder/footer.png)
+- Search page
+  ![image](https://github.com/yyf9991715/webscope/blob/test/img-folder/search.png)
+- Searched Python
+  ![image](https://github.com/yyf9991715/webscope/blob/test/img-folder/searched.png)
+- Books Details Page
+  ![image](https://github.com/yyf9991715/webscope/blob/test/img-folder/bookdetails.png)
+- Accountsetting Page
+  ![image](https://github.com/yyf9991715/webscope/blob/test/img-folder/accountsetting.png)
+- My library Page
+  ![image](https://github.com/yyf9991715/webscope/blob/test/img-folder/mylib.png)
+- My rating and review Page
+  ![image](https://github.com/yyf9991715/webscope/blob/test/img-folder/myreview.png)
+
 ### Technical Architecture
 - MERN stack application
 - MongoDB as database
