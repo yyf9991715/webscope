@@ -29,7 +29,7 @@ export default function Login (){
                         localStorage.setItem("userName",res.data.name);
                         localStorage.setItem("userEmail",res.data.email);
 
-                        navigate('/');  
+                        navigate('/search');  
                     
                 } else {
                     alert("username or password is wrong!")
