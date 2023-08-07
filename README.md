@@ -56,7 +56,7 @@ Webscope
 ### Screenshot
 - login
   ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/login.png)
--sign up
+- Sign up
   ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/signup.png)
 - Search page
   ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/search.png)
