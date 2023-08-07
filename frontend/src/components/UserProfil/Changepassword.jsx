@@ -4,6 +4,7 @@ import { useState} from "react";
 import axios from 'axios';
 import "./Changepassword.css"
 
+
 function Changepassword() {
   let nuserid=localStorage.getItem("userid");
   const [values,setValues]=useState({
@@ -14,7 +15,7 @@ function Changepassword() {
   const handleSubmit=(event)=>{
     event.preventDefault();
     if(values.password&&values.passwordagain){
-      axios.post("http://localhost:4000/user/updatePW",values)
+      axios.post(`${process.env.REACT_APP_backendaddress}/user/updatePW`,values)
       .then(res=>
       {
         console.log(res.data.Status); 

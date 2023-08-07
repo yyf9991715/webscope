@@ -5,7 +5,6 @@ import "../../components/Searchbar"
 import Searchbar from '../../components/Searchbar';
 import Resourcecard from '../../components/Resourcecard';
 import axios from 'axios';
-
 const Search = () => {
   
 const [values,setValues]=useState([{
@@ -14,7 +13,7 @@ const [values,setValues]=useState([{
   avg_reviews:""
 }])
 useEffect(()=>{
-  fetch("http://localhost:4000/book/getall",{
+  fetch(`${process.env.REACT_APP_backendaddress}/book/getall`,{
     method:"GET",
   })
     .then((res)=>res.json())

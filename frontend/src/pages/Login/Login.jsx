@@ -9,7 +9,6 @@ const style={
         height:"85vh"
     }
 }
-
 export default function Login (){
 
     const navigate=useNavigate()
@@ -21,7 +20,7 @@ export default function Login (){
 
     const handleSubmit=(event)=>{
         event.preventDefault();
-        axios.post("http://localhost:4000/user/auth",values)
+        axios.post(`${process.env.REACT_APP_backendaddress}/user/auth`,values)
             .then(res=>{
                 if(res.data.Status === 'success') {
                         console.log(res.data.id);

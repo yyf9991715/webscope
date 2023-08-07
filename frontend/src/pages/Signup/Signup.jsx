@@ -22,7 +22,7 @@ export default function Signup (){
     const handleSubmit=(event)=>{
         event.preventDefault();
         if(values.name&&values.email&&values.password&&values.passwordagain){
-            axios.post("http://localhost:4000/user/createnewuser",values)
+            axios.post(`${process.env.REACT_APP_backendaddress}/user/createnewuser`,values)
             .then(res=>{
                 if(res.data.Status==="userexisted"){
                     alert("user name has already existed!");

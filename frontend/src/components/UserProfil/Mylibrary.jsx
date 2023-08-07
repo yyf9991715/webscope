@@ -3,6 +3,8 @@ import "./Mylibrary.css"
 import axios from 'axios';
 import {TiDelete} from "react-icons/ti"
 
+
+
 const Mylibrary = () => {
   const userid=Number(localStorage.getItem("userid"));
   const [results,setResults]=useState([]);
@@ -16,7 +18,7 @@ const Mylibrary = () => {
   }
 
   useEffect(()=>{
-    axios.get("http://localhost:4000/lib/byuid/"+userid)
+    axios.get(`${process.env.REACT_APP_backendaddress}/lib/byuid/`+userid)
           .then(res=>{
             setResults(res.data);
           })
@@ -25,7 +27,7 @@ const Mylibrary = () => {
  function handleOnclick(itemid){
   console.log(itemid);
   const data={userid,itemid};
-  axios.post("http://localhost:4000/lib/del",data)
+  axios.post(`${process.env.REACT_APP_backendaddress}/lib/del`,data)
       .then(res=>{
         if(res.data.Status==="success") {
           alert("cancel favorite");

@@ -24,18 +24,18 @@ const Resource = (props) => {
 console.log(data);
   
   useEffect(()=>{
-      axios.get('http://localhost:4000/book/detail/'+bookid)
+      axios.get(`${process.env.REACT_APP_backendaddress}/book/detail/`+bookid)
         .then(res=>{
           let resbook=res.data.resbook;
           if(resbook.avg_reviews) resbook.avg_reviews=resbook.avg_reviews.$numberDecimal;
           if(resbook.price) resbook.price=resbook.price.$numberDecimal;
           setValues(resbook);
         }).catch(err=>console.log(err))
-        axios.get("http://localhost:4000/review/byitemid/"+bookid)
+        axios.get(`${process.env.REACT_APP_backendaddress}/review/byitemid/`+bookid)
           .then(res=>{
             setRatings(res.data);
           })
-        axios.get("http://localhost:4000/lib/byuid/"+userid)
+        axios.get(`${process.env.REACT_APP_backendaddress}/lib/byuid/`+userid)
           .then(res=>{
             let results=res.data;
             console.log("results",results);
@@ -51,12 +51,12 @@ console.log(data);
     }else
     setAdd(true);
     if(!add){
-      axios.post("http://localhost:4000/lib/newlib",data)
+      axios.post(`${process.env.REACT_APP_backendaddress}/lib/newlib`,data)
         .then(res=>{
           if(res.data.Status==="success") alert("add to my library successfully!")
         })
     }else{
-      axios.post("http://localhost:4000/lib/del",data)
+      axios.post(`${process.env.REACT_APP_backendaddress}/lib/del`,data)
         .then(res=>{
           if(res.data.Status==="success") alert("cancel favorite");
         })

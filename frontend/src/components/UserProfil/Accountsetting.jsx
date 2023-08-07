@@ -5,6 +5,7 @@ import { useState} from "react";
 import axios from 'axios';
 import {useNavigate } from "react-router-dom";
 
+
 const Accountsetting = () => {
   const navigate=useNavigate();
   var nuserid=localStorage.getItem("userid");
@@ -18,7 +19,7 @@ const Accountsetting = () => {
   const handleSubmit=(event)=>{
     event.preventDefault();
     // if(values.newmail){
-      axios.post("http://localhost:4000/user/upuserpro",values)
+      axios.post(`${process.env.REACT_APP_backendaddress}/user/upuserpro`,values)
       .then(res=>{
         alert("already changed");
         console.log(res.data.data.name,res.data.data.email);
