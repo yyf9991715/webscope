@@ -20,7 +20,7 @@ We aimed to do an easy-to-use webpage to make easier finding resources for learn
   ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/chatgpt2.png)
   ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/chatgpt3.png)
   ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/chatgpt4.png)
-  
+  ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/Chatgpt5.png)
 - copy the key to .env file
   ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/env.png)
 ### Group Member
