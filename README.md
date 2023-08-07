@@ -15,9 +15,14 @@ We aimed to do an easy-to-use webpage to make easier finding resources for learn
     - run the command "npm run build" to build the project
     - run the command "serve -s build" and site will work in the localhost:3000
 ### Configure Chatgpt API Key
-- open https://openai.com/blog/chatgpt and login
-  
-  
+- open https://openai.com/blog/chatgpt and login, step by step get chatgpt API key 
+  ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/chatgpt1.png)
+  ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/chatgpt2.png)
+  ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/chatgpt3.png)
+  ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/chatgpt4.png)
+  ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/chatgpt5.png)
+- copy the key to .env file
+  ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/env.png)
 ### Group Member
 Webscope
 - Yifei Yao
