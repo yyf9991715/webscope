@@ -1,12 +1,28 @@
 # ELearningHelper(Group: Webscope) 
 
 We aimed to do an easy-to-use webpage to make easier finding resources for learning.
-- advertisement
-[![Advertisement](https://res.cloudinary.com/marcomontalbano/image/upload/v1691074281/video_to_markdown/images/youtube--KAjMv5EHimw-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/KAjMv5EHimw "Advertisement")
-- live demo
-  
-  [![](https://res.cloudinary.com/marcomontalbano/image/upload/v1691316628/video_to_markdown/images/youtube--fxIXqCb3rtQ-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/fxIXqCb3rtQ "")
 
+### How to run  ElearningHelper 
+- Download the source code from github https://github.com/yyf9991715/webscope
+- install node.js with npm, version 18.0.0 or newer 
+- Backend
+    - replace the ChatGPT key in .env file with your key
+    - in the folder "/backend" run the command "npm install" to install dependency
+    - run the backend with command "node server.js"
+- frontend
+    - in the folder "/frontend" command "npm install" to install dependency
+    - update the backend's address in the .env file if you run the backend not in localhost
+    - run the command "npm run build" to build the project
+    - run the command "serve -s build" and site will work in the localhost:3000
+### Configure Chatgpt API Key
+- open https://openai.com/blog/chatgpt and login
+  
+  
+### Group Member
+Webscope
+- Yifei Yao
+- Ruidan Liu
+- Francisco Checa
 ### Features
 - Login
 - Sign up
@@ -23,6 +39,14 @@ We aimed to do an easy-to-use webpage to make easier finding resources for learn
     - Go to chatgpt room
 - ChatGPT
     - To better understand topics and books
+### Technical Architecture
+- MERN stack application
+- MongoDB as database
+- ExpressJS as back-end
+- ReactJS as front-end
+- NodeJS as server platform
+- Chatgpt API
+- Render as desployment tool
 
 ### Screenshot
 - login
@@ -55,32 +79,14 @@ We aimed to do an easy-to-use webpage to make easier finding resources for learn
   ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/Contactus.png)
 - Privacy Page
   ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/privacy.png)
-### Technical Architecture
-- MERN stack application
-- MongoDB as database
-- ExpressJS as back-end
-- ReactJS as front-end
-- NodeJS as server platform
-- Chatgpt API
-- Render as desployment tool
-### How to run  ElearningHelper 
-- Download the source code from github https://github.com/yyf9991715/webscope
-- install node.js with npm, version 18.0.0 or newer 
-- Backend
-    - replace the ChatGPT key in .env file with your key
-    - in the folder "/backend" run the command "npm install" to install dependency
-    - run the backend with command "node server.js"
-- frontend
-    - in the folder "/frontend" command "npm install" to install dependency
-    - update the backend's address in the .env file if you run the backend not in localhost
-    - run the command "npm run build" to build the project
-    - run the command "serve -s build" and site will work in the localhost:3000
-    
-### Group Member
-Webscope
-- Yifei Yao
-- Ruidan Liu
-- Francisco Checa
+- advertisement
+[![Advertisement](https://res.cloudinary.com/marcomontalbano/image/upload/v1691074281/video_to_markdown/images/youtube--KAjMv5EHimw-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/KAjMv5EHimw "Advertisement")
+- live demo
+  
+  [![](https://res.cloudinary.com/marcomontalbano/image/upload/v1691316628/video_to_markdown/images/youtube--fxIXqCb3rtQ-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/fxIXqCb3rtQ "")
+  
+
+
 
   
 
