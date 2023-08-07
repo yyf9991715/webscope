@@ -1,4 +1,7 @@
 const axios=require("axios");
+const dotenv=require("dotenv");
+dotenv.config();
+
 
 async function main(){
     let param= new URLSearchParams();
@@ -7,7 +10,7 @@ async function main(){
     param.append("passwordagain","");
 
     await axios.post(
-        "http://localhost:4000/user/updatePW",
+        `${process.env.REACT_APP_backendaddress}/user/updatePW`,
         param,
         {
             'Content-Type' :'application/x-www-form-urlencoded',
@@ -27,7 +30,7 @@ async function testnewUser(){
     param.append("passwordagain","test");
 
     await axios.post(
-        "http://localhost:4000/user/createnewuser",
+        `${process.env.REACT_APP_backendaddress}/user/createnewuser`,
         param,
         {
             'Content-Type' :'application/x-www-form-urlencoded',
@@ -46,7 +49,7 @@ async function testrating(){
     param.append("rating",1)
 
     await axios.post(
-        "http://localhost:4000/review/newreview",
+        `${process.env.REACT_APP_backendaddress}/review/newreview`,
         param,
         {
             'Content-Type' :'application/x-www-form-urlencoded',
@@ -63,7 +66,7 @@ async function testmark(){
     param.append("itemid",22);
     console.log("testmark")
     await axios.post(
-        "http://localhost:4000/lib/newlib",
+        `${process.env.REACT_APP_backendaddress}/lib/newlib`,
         param,
         {
             'Content-Type' :'application/x-www-form-urlencoded',
@@ -79,7 +82,7 @@ async function testdel(){
     param.append("itemid",20);
     console.log("testmarkdel")
     await axios.post(
-        "http://localhost:4000/lib/del",
+        `${process.env.REACT_APP_backendaddress}/lib/del`,
         param,
         {
             'Content-Type' :'application/x-www-form-urlencoded',

@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-
+const dotenv=require("dotenv");
+dotenv.config();
 router.post('/', async (req, res) => {
   try {
     const { message } = req.body;
@@ -19,7 +20,7 @@ router.post('/', async (req, res) => {
       const { Configuration, OpenAIApi } = require("openai");
 
       const configuration = new Configuration({
-        apiKey: "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",
+        apiKey: process.env.chatkey,
       });
       const openai = new OpenAIApi(configuration);
 
