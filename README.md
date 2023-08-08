@@ -64,6 +64,8 @@ Webscope
   ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/searched.png)
 - Books Details Page
   ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/bookdetails.png)
+- Chatgpt Room Page
+  ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/chatgpt.png)
 - Accountsetting Page
   ![image](https://github.com/yyf9991715/webscope/blob/master/img-folder/accountsetting.png)
 - My library Page
